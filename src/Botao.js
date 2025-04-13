@@ -8,12 +8,12 @@ export default function Botao({texto,fundo,fundoHover,style}){
     )
 }
 const But=styled.button`
-background:#${p=>p.fundo};color:white;
+background:${p=>p.fundo};color:white;
 width:90%;height:50px;
 border-radius:10px;
 border:0;font-size:14px;font-weight:600;
 cursor:pointer;
-
+max-width:400px;
 &:hover{
-background:#${p=>p.fundoHover}}
+background:${p=>p.fundoHover}}
 `

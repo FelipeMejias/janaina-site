@@ -1,6 +1,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+    --detalhe:#c084e0;
+    --claro:#d3aee8;
   }
 div{
     display:flex;

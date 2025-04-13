@@ -17,7 +17,7 @@ export default function App(){
                 <h1>Contato</h1>
                 <h1>Rescursos</h1>
                 </section>
-                <Botao texto={'Agende agora'} fundo={'4CCDC3'} fundoHover={'55dbd0'} style={{width:'200px'}} />
+                <Botao texto={'Agende agora'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
             </Acessos>:<></>}
             <Menu>
                 <img src={logo}/>
@@ -28,16 +28,18 @@ export default function App(){
             </Menu>
             <Resto>
                 <Intro>
+                    <Conteudo>
                     <h1>Seja bem-vindo(a)!</h1>
-                    <h2><span>Sou Janaina Faro</span></h2>
+                    <h2><span>Prazer, Janaina Faro</span></h2>
                     <h3>Psicólogo Especialista em Avaliação Neuropsicológica e Professor de Psicologia</h3>
                     <h4>Ofereço serviços profissionais de <span>avaliação neuropsicológica e avaliação terapêutica</span> através de um processo humanizado e inovador, focado em fornecer <span>psicodiagnósticos precisos e recomendações claras</span> para promover a sua saúde mental e qualidade de vida. Além disso, <span>ministro cursos, palestras e workshops</span> voltados para psicólogos e estudantes.</h4>
                     <h1>Vamos conversar?</h1>
-                    <Botao texto={'AGENDE SUA CONSULTA!'} fundo={'4CCDC3'} fundoHover={'55dbd0'} style={{margin:'100px 0 40px 0'}} />
+                    <Botao texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />
                     <img src={foto} />
-
+                    </Conteudo>
                 </Intro>
                 <Servicos>
+                    <Conteudo>
                     <h1><span>Meus Serviços</span></h1>
                     <img src={foto} />
                     <h2><span>Avaliação Terapêutica</span></h2>
@@ -53,8 +55,10 @@ export default function App(){
                     <h2><span>Cursos, Palestras e Workshops</span></h2>
                     <h3>Ofereço cursos, palestras e workshops sobre diversos temas da psicologia para alunos e profissionais. Trabalho com pessoas físicas e jurídicas.
                         Entre em contato!</h3>
+                    </Conteudo>
                 </Servicos>
                 <Consultorios>
+                    <Conteudo>
                     <h1><span>Consultórios</span></h1>
                     <h2>Atendo de forma <strong>híbrida (presencial e/ou online)</strong>, dependendo do serviço desejado. Meu local de atendimento é nas unidades da <strong>Livance do Rio de Janeiro (Botafogo e Barra da Tijuca)</strong>. Os consultórios são modernos, acolhedores, impecáveis e com localização privilegiada, pensado para te oferecer conforto e privacidade. Ambos os consultórios possuem <strong>estacionamento rotativo no local</strong>.</h2>
                     <section>
@@ -75,27 +79,39 @@ export default function App(){
                             </iframe>
                         </Sala>
                     </section>
+                    </Conteudo>
                 </Consultorios>
                 <Consultorios>
+                    <Conteudo>
                     <h1><span>Agendar</span></h1>
                     <h2>Agende sua consulta de maneira <strong>simples e prática</strong>. Vamos encontrar um horário que se encaixe na sua rotina.</h2>
-                    <Botao texto={'AGENDE SUA CONSULTA!'} fundo={'000000'} fundoHover={'323232'}  />
+                    <Botao texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'}  />
+                    </Conteudo>
                 </Consultorios>
                 <Servicos>
+                    <Conteudo>
                     <h1><span>Minha Formação</span></h1>
                     <h3>Atualmente sou Professor de Psicologia na UniLaSalle. Também sou Mestre e Doutorando em Psicologia Clínica pela PUC-Rio. Minha formação universitária também inclui os cursos de Graduação em Psicologia e em Administração pela UFRJ. Por fim, realizo minha Especialização em Neuropsicologia pelo Instituto de Ensino Albert Einstein. </h3>
-                    <Botao texto={'SAIBA MAIS'} fundo={'ffffff'} fundoHover={'C8CED0'} style={{margin:'100px 0 40px 0',color:'#292F36'}} />
+                    <Botao texto={'SAIBA MAIS'} fundo={'#ffffff'} fundoHover={'#C8CED0'} style={{margin:'100px 0 40px 0',color:'#292F36'}} />
                     <img style={{borderRadius:'50%'}} src={perfil} />
+                    </Conteudo>
                 </Servicos>
                 <Consultorios>
+                    <Conteudo>
                     <h1><span>Dúvidas? Entre em Contato!</span></h1>
                     <h2>Tem dúvidas ou quer saber mais sobre meus serviços? Estou aqui para te ajudar! <strong>Entre em contato</strong> pelo formulário ao lado e responderei assim que possível. Será um prazer atender você e esclarecer qualquer questão.</h2>
                     <h2>Você também pode entrar em contato através das <strong>minhas redes sociais</strong>:</h2>
+                    </Conteudo>
                 </Consultorios>
             </Resto>
         </Tela>
     )
 }
+const Conteudo=styled.div`
+flex-direction:column;
+align-items:center;
+width:100%;max-width:700px;
+`
 const Sala=styled.div`
 flex-direction:column;
 img{width:100%;max-height:45%};
@@ -159,7 +175,7 @@ overflow:auto;
 const Servicos=styled.div`
 background:#292F36;
 flex-direction:column;
-width:100d%;align-items:center;
+width:100%;align-items:center;
 padding:30px;
 font-family: "Poppins", sans-serif;
 color:white;
@@ -169,7 +185,7 @@ h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
 span{
 position: relative;
-  background-image: linear-gradient(transparent 60%, #4ccdc3 60%);
+  background-image: linear-gradient(transparent 60%, var(--detalhe) 60%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -177,19 +193,20 @@ position: relative;
 `
 const Intro=styled.div`
 flex-direction:column;
-width:100d%;align-items:center;
+width:100%;align-items:center;
 padding:30px;
 color:#292F36;
 font-family: "Poppins", sans-serif;
-h1{width:100%;font-size:22px;font-weight:400;color:#4CCDC3;margin:0;font-family: "Dancing Script", cursive;}
-h2{width:100%;font-size:55px;font-weight:600;margin:10px 0 10px 0;}
+h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);margin:0;font-family: "Dancing Script", cursive;}
+h2{z-index:4;width:100%;height:90px;background:#E6E6E6;position:sticky;top:0;
+width:100%;font-size:45px;font-weight:600;margin:10px 0 10px 0;}
 h3{width:100%;font-size:22px;font-weight:600;margin:0;}
 h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
 }
 span{
 position: relative;
-  background-image: linear-gradient(transparent 60%, #4ccdc3 60%);
+  background-image: linear-gradient(transparent 60%, var(--detalhe) 60%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
