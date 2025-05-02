@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
-export default function Botao({texto,fundo,fundoHover,style}){
+export default function Botao({handle,texto,fundo,fundoHover,style}){
     return(
-        <But fundo={fundo} fundoHover={fundoHover} style={style}>
+        <But onClick={handle} fundo={fundo} fundoHover={fundoHover} style={style}>
             {texto}
         </But>
     )
