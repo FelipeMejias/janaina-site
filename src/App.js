@@ -170,7 +170,7 @@ const Menu=styled.div`
 justify-content:space-between;
 align-items:center;
 height:80px;width:100dvw;
-img{height:80px;width:60px;margin:0 0 0 10px;}
+img{height:50px;width:50px;margin:0 0 0 10px;}
 z-index:6;
 `
 const Resto=styled.div`
@@ -201,7 +201,7 @@ color:#292F36;
 font-family: "Poppins", sans-serif;
 h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);margin:0;font-family: "Dancing Script", cursive;}
 h2{z-index:4;width:100%;height:90px;background:var(--fundo);position:sticky;top:0;
-width:100%;font-size:40px;font-weight:600;margin:10px 0 10px 0;}
+width:100%;font-size:33px;font-weight:600;margin:10px 0 10px 0;}
 h3{width:100%;font-size:22px;font-weight:600;margin:0;}
 h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
