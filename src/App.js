@@ -83,13 +83,6 @@ export default function App(){
                     </section>
                     </Conteudo>
                 </Consultorios>
-                <Consultorios>
-                    <Conteudo>
-                    <h1><span>Agendar</span></h1>
-                    <h2>Agende sua consulta de maneira <strong>simples e prática</strong>. Vamos encontrar um horário que se encaixe na sua rotina.</h2>
-                    <Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'}  />
-                    </Conteudo>
-                </Consultorios>
                 <Servicos>
                     <Conteudo>
                     <h1><span>Minha Formação</span></h1>
@@ -138,7 +131,7 @@ padding:30px;
 font-family: "Poppins", sans-serif;
 color:#292F36;
 h1{z-index:4;width:100%;height:70px;background:var(--fundo);position:sticky;top:0;width:100%;font-size:32px;font-weight:600;margin:15px 0 30px 0;}
-h2{font-size:18px;font-weight:400;margin:15px 0 30px 0;}
+h2{font-size:18px;font-weight:400;margin:15px 0 30px 0;span{font-weight:500;}}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
 strong{
