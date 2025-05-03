@@ -4,33 +4,36 @@ import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
 import Titulo from "./Titulo";
+import { CgEnter } from "react-icons/cg";
 export default function Nomear(){
     const [atual,setAtual]=useState(0)
     const cards=[
-{texto:`
-texto 1
+{titulo:'O início de um olhar mais atento',texto:`
+Nem sempre chegamos com tudo definido — às vezes, o mais importante é dar o primeiro passo.
+É nesse espaço inicial que começamos a cuidar daquilo que precisa ser visto com mais profundidade.
 `,icone:"🌱"},
-{texto:`
-texto 2
+{titulo:'Dar nome ao que te trouxe até aqui',texto:`
+No primeiro encontro, escutamos sua história, entendemos o motivo da sua busca e começamos a organizar o que precisa ser investigado.
 `,icone:"💬"},
-{texto:`
-texto 3
+{titulo:'Investigar com profundidade',texto:`
+A partir da escuta, iniciamos a testagem, sempre escolhida de forma individualizada, para compreender a fundo como você pensa, reage e se organiza no dia a dia.
 `,icone:"🔍"},
-{texto:`
-texto 4
+{titulo:'Integrar e direcionar',texto:`
+Na devolutiva, não entregamos apenas um laudo, mas uma visão clara das dificuldades e potencialidades identificadas, com sugestões de caminhos mais assertivos para promover qualidade de vida.
 `,icone:"🌀"},
-{texto:`
-Você merece entender o que sente. E saber o que fazer com isso. Esse é o propósito do Nomear para Transformar.
+{titulo:'Você merece entender o que sente',texto:`
+E saber o que fazer com isso. Esse é o propósito do Nomear para Transformar.
 `,icone:"✨"},
     ]
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Minha Formação'  style={{background:'var(--fundo2'}} />
+                <Titulo nome='Nomear para Transformar' style={{background:'var(--fundo2',justifyContent:'center'}} />
                 <Carrossel>
                     {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
                     <Card>
                         <p style={{fontSize:'50px'}}>{cards[atual].icone}</p>
+                        <h1>{cards[atual].titulo}</h1>
                         <p>{cards[atual].texto}</p>
                     </Card>
                     {atual!=4?<Seta onClick={()=>setAtual(atual+1)} style={{right:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowRight /></Seta>:<Seta/>}
@@ -52,9 +55,11 @@ align-items:center;justify-content:center;
 const Card=styled.div`
 flex-direction:column;
 align-items:center;
-width:260px;
+width:calc(100% - 140px);
+max-width:460px;
 font-size:30px;
-p{margin:5px;font-size:18px;text-align:center;}
+p{margin:5px;font-size:16px;text-align:center;}
+h1{margin:5px;font-size:19px;font-weight:600;text-align:center;}
 `
 const Seta=styled.div`
 align-items:center;position:absolute;

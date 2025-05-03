@@ -18,7 +18,6 @@ top:0px;
 }
 `
 const P=styled.p`
-width:100%;
 font-size:26px;font-weight:600;
 margin:0
 `

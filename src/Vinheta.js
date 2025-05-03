@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import j from './j.png'
-import f from './f.png'
+import j from './imgs/j.png'
+import f from './imgs/f.png'
 
 const tamanho=250
 export default function Vinheta() {

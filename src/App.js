@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import logo from './logo.png'
-import sala1 from './consultorio1.jpg'
-import sala2 from './consultorio2.jpg'
-import foto from './perfil2.jpg'
-import perfil from './perfil.jpg'
+import logo from './imgs/logo.png'
+import sala1 from './imgs/consultorio1.jpg'
+import sala2 from './imgs/consultorio2.jpg'
+import foto from './imgs/perfil2.jpg'
+import perfil from './imgs/perfil.jpg'
 import { useEffect, useState } from "react";
 import Botao from "./Botao"
 import { FaInstagram } from 'react-icons/fa';
@@ -94,7 +94,7 @@ export default function App(){
                 </Consultorios>
                 <Servicos>
                     <Conteudo>
-                    <Titulo nome='Minha Formação'  style={{background:'var(--fundo2'}} />
+                    <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
                     <h3>Atualmente sou Professor de Psicologia na UniLaSalle. Também sou Mestre e Doutorando em Psicologia Clínica pela PUC-Rio. Minha formação universitária também inclui os cursos de Graduação em Psicologia e em Administração pela UFRJ. Por fim, realizo minha Especialização em Neuropsicologia pelo Instituto de Ensino Albert Einstein. </h3>
                     <Botao texto={'SAIBA MAIS'} fundo={'#ffffff'} fundoHover={'#C8CED0'} style={{margin:'100px 0 40px 0',color:'#292F36'}} />
                     <img style={{borderRadius:'50%'}} src={perfil} />
