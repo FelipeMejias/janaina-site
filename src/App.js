@@ -6,6 +6,8 @@ import foto from './perfil2.jpg'
 import perfil from './perfil.jpg'
 import { useState } from "react";
 import Botao from "./Botao"
+import { FaInstagram } from 'react-icons/fa';
+
 //import dayjs from 'dayjs'
 export default function App(){
     const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +45,7 @@ export default function App(){
                     <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
                     <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
                     <h4>✨ Você merece entender o que sente. E saber o que fazer com isso. Esse é o propósito do <span>Nomear para Transformar</span>.</h4>
-                    <h1>Vamos conversar?</h1>
+                    {/*<h1>Vamos conversar?</h1>*/}
                     <Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />
                     <img src={foto} />
                     </Conteudo>
@@ -98,15 +100,26 @@ export default function App(){
                 </Servicos>
                 <Consultorios>
                     <Conteudo>
-                    <h1><span>Dúvidas? Entre em Contato!</span></h1>
-                    <h2>Tem dúvidas ou quer saber mais sobre meus serviços? Estou aqui para te ajudar! <strong>Entre em contato</strong> pelo formulário ao lado e responderei assim que possível. Será um prazer atender você e esclarecer qualquer questão.</h2>
-                    <h2>Você também pode entrar em contato através das <strong>minhas redes sociais</strong>:</h2>
+                    <h1><span>Ficou com dúvidas?</span></h1>
+                    <h2>Se você quer entender melhor como funciona a avaliação psicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
+                    <h2>Estou à disposição para esclarecer suas dúvidas e te ajudar a seguir com mais clareza.</h2>
+                    <Insta href="https://www.instagram.com/janainafaro.neuropsi">
+                        <FaInstagram style={{ color: '#E1306C', fontSize: '24px' }} />
+                        <p>janainafaro.neuropsi</p>
+                    </Insta>
+                    <h2>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
                     </Conteudo>
                 </Consultorios>
             </Resto>
         </Tela>
     )
 }
+const Insta=styled.a`
+display:flex;align-items:center;
+ text-decoration: none;
+  color: inherit;
+  p{margin-left:10px;}
+`
 const Conteudo=styled.div`
 flex-direction:column;
 align-items:center;
@@ -161,7 +174,7 @@ background:var(--fundo);
 img{border-radius:10px;}
 span{
 position: relative;
-  background-image: linear-gradient(transparent 80%, var(--detalhe) 80%);
+  background-image: linear-gradient(transparent 85%, var(--sublinhado) 85%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

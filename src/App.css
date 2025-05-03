@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     --detalhe:#857B3E;
+    --sublinhado:#ada671;
     --claro:#978d4a;
     --fundo:#e2ceb3;
   }
