@@ -1,19 +1,59 @@
 import styled from "styled-components"
-
+import { TiSpiral } from "react-icons/ti";
+import { SlArrowLeft } from "react-icons/sl";
+import { SlArrowRight } from "react-icons/sl";
+import { useState } from "react";
 export default function Nomear(){
+    const [atual,setAtual]=useState(0)
+    const cards=[
+{texto:`
+texto 1
+`,icone:"🌱"},
+{texto:`
+texto 2
+`,icone:"💬"},
+{texto:`
+texto 3
+`,icone:"🔍"},
+{texto:`
+texto 4
+`,icone:"🌀"},
+{texto:`
+Você merece entender o que sente. E saber o que fazer com isso. Esse é o propósito do Nomear para Transformar.
+`,icone:"✨"},
+    ]
     return(
         <Servicos>
             <Conteudo>
-            <h1><span>Nomear para Transformar</span></h1>
-            <h2><span>Avaliação Terapêutica</span></h2>
-            <h3>A Avaliação Neuropsicológica vai além do diagnóstico – é uma oportunidade de autoconhecimento e crescimento. Inspirada na Avaliação Terapêutica, desenvolvida em Houston, Texas, minha abordagem ajuda a compreender seu perfil cognitivo e emocional de forma profunda, com ou sem um psicodiagnóstico.
-                Trabalho com adultos e idosos.</h3>
-            
-            
+                <h1><span>Nomear para Transformar</span></h1>
+                <Carrossel>
+                    {atual!=0?<Seta style={{fontSize:'36px',cursor:'pointer'}}><SlArrowLeft onClick={()=>setAtual(atual-1)}/></Seta>:<Seta/>}
+                    <Card>
+                        <p style={{fontSize:'50px'}}>{cards[atual].icone}</p>
+                        <p>{cards[atual].texto}</p>
+                    </Card>
+                    {atual!=4?<Seta style={{fontSize:'36px',cursor:'pointer'}}><SlArrowRight onClick={()=>setAtual(atual+1)}/></Seta>:<Seta/>}
+                </Carrossel>
             </Conteudo>
         </Servicos>
     )
 }
+const Card=styled.div`
+flex-direction:column;
+align-items:center;
+width:260px;
+font-size:30px;
+p{margin:5px;font-size:18px;text-align:center;}
+`
+const Seta=styled.div`
+align-items:center;
+width:60px;justify-content:center;height:100%;
+`
+const Carrossel=styled.div`
+align-items:center;
+justify-content:space-evenly;
+width:100%;height:300px;margin:30px 0 30px 0;
+`
 const Conteudo=styled.div`
 flex-direction:column;
 align-items:center;
@@ -25,10 +65,10 @@ flex-direction:column;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
-color:var(--fundo);
+color:var(--fundo);min-height:480px;
 h1{display:flex;align-items:center;justify-content:center;
 z-index:4;width:100%;text-align:center;height:80px;background:var(--fundo2);
-position:sticky;top:0;font-size:32px;font-weight:600;margin:0}
+position:sticky;top:0;font-size:28px;font-weight:600;margin:0}
 h2{font-size:24px;font-weight:600;margin:15px 0 30px 0;}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
