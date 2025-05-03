@@ -13,7 +13,7 @@ export default function BotaoWpp({handle}){
 const Bot=styled.div`
 justify-content:center;align-items:center;
 cursor:pointer;
-position:fixed;
+position:absolute;
 bottom:10px;right:20px;
 height:70px;width:70px;
 background:#925029;border-radius:50%;

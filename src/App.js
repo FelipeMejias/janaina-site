@@ -21,7 +21,9 @@ export default function App(){
             window.open(urlWhatsapp);
         }
     return(
+        <Fundo>
         <Tela>
+        <BotaoWpp handle={mandarWpp}/>
             {isOpen?<Acessos>
                 <section>
                 <h1>Serviços</h1>
@@ -50,7 +52,7 @@ export default function App(){
                     <h4>Explore os cards abaixo e conheça nossa proposta:</h4>
                     {/*<h1>Vamos conversar?</h1>*/}
                     {/*<Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />*/}
-                    <BotaoWpp handle={mandarWpp}/>
+                   
                     {/*<img src={foto} />*/}
                     </Conteudo>
                 </Intro>
@@ -91,8 +93,14 @@ export default function App(){
                 </Consultorios>
             </Resto>
         </Tela>
+        </Fundo>
     )
 }
+const Fundo=styled.div`
+width:100dvw;height:100dvh;
+background:yellow;
+justify-content:center;
+`
 const Insta=styled.a`
 display:flex;align-items:center;
  text-decoration: none;
@@ -111,7 +119,7 @@ img{width:calc(50% - 10px);};
 `
 const Consultorios=styled.div`
 flex-direction:column;
-
+max-width:700px;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
@@ -119,7 +127,7 @@ color:var(--texto);
 h1{display:flex;align-items:center;
 z-index:4;width:100%;height:70px;background:var(--fundo);
 position:sticky;top:0;width:100%;font-size:32px;font-weight:600;margin:0}
-h2{font-size:18px;font-weight:400;margin:15px 0 30px 0;span{font-weight:500;}}
+h2{font-size:18px;font-weight:400;margin:0;span{font-weight:500;}}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
 strong{
@@ -145,12 +153,14 @@ display:flex;flex-direction:column;align-items:center;width:100%;
 
 }
 h1{cursor:pointer;font-size:36px;
-font-weight:400;margin:10px 0 20px 0}
+font-weight:400;margin:0}
 
 `
 const Tela=styled.div`
+position:relative;
 flex-direction:column;
 height:100dvh;width:100dvw;
+max-width:700px;
 background:var(--fundo);
 img{border-radius:10px;}
 span{
@@ -163,7 +173,8 @@ position: relative;
 const Menu=styled.div`
 justify-content:space-between;
 align-items:center;
-height:80px;width:100dvw;
+
+height:80px;width:100%;
 img{height:50px;width:50px;margin:0 0 0 10px;}
 z-index:6;
 `
@@ -171,20 +182,23 @@ const Resto=styled.div`
 flex-direction:column;
 align-items:center;
 height:calc(100% - 80px);width:100%;
-overflow:auto;
+overflow-y:auto;
+overflow-x:hidden;
 position:relative;
+
 `
 const Servicos=styled.div`
 background:var(--fundo2);
 flex-direction:column;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
+max-width:700px;
 font-family: "Poppins", sans-serif;
 color:var(--fundo);
 h1{display:flex;align-items:center;justify-content:center;
 z-index:4;width:100%;text-align:center;height:80px;background:var(--fundo2);
 position:sticky;top:0;font-size:32px;font-weight:600;margin:0}
-h2{font-size:24px;font-weight:600;margin:15px 0 30px 0;}
+h2{font-size:24px;font-weight:600;margin:0}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
 
@@ -195,13 +209,14 @@ flex-direction:column;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
 color:var(--texto);
+max-width:700px;
 font-family: "Poppins", sans-serif;
 h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
 margin:0;font-family: "Dancing Script", cursive;}
 h2{z-index:4;width:100%;height:80px;background:var(--fundo);position:sticky;
-top:0;width:100%;font-size:33px;font-weight:600;margin:0}
+top:0;width:100%;font-size:30px;font-weight:600;margin:0}
 h3{width:100%;font-size:22px;font-weight:600;margin:0;}
-h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
+h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:0;
 span{font-weight:500;}
 }
 
