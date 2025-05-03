@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import j from './imgs/j.png';
-import f from './imgs/f.png';
+import j from './imgs/jb2.png';
+import f from './imgs/fb2.png';
 
 const tamanho = 250;
 
@@ -19,7 +19,11 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: var(--fundo);
+ background: 
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+ url('/estilo.jpeg');
+ background-size: cover;
+  background-position: center;
 `;
 
 // Animação 1: movimento vertical até o centro

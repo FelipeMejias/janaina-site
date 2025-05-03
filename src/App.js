@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import logo from './imgs/logo.png'
+import logoBranco from './imgs/logobranco.png'
 import sala1 from './imgs/consultorio1.jpg'
 import sala2 from './imgs/consultorio2.jpg'
 import foto from './imgs/perfil2.jpg'
@@ -7,6 +8,7 @@ import perfil from './imgs/perfil.jpg'
 import { useEffect, useState } from "react";
 import Botao from "./Botao"
 import { FaInstagram } from 'react-icons/fa';
+import { IoMailOutline } from "react-icons/io5";
 import BotaoWpp from "./BotaoWpp"
 import Nomear from "./Nomear"
 import Vinheta from "./Vinheta"
@@ -16,6 +18,7 @@ import Titulo from "./Titulo"
 export default function App(){
     const [isOpen, setIsOpen] = useState(false)
     const [vinho,setVinho]=useState(true)
+    const [copiado,setCopiado]=useState(false)
     function mandarWpp(){
             const telefone = 5521999242603;
             let texto=""
@@ -23,6 +26,9 @@ export default function App(){
             const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
             window.open(urlWhatsapp);
         }
+    function copiarTexto(){
+        navigator.clipboard.writeText('janainafaro.neuropsi@gmail.com').then(() => {setCopiado(true);setTimeout(() => setCopiado(false), 2000)}).catch(err => console.error('Erro ao copiar o texto: ', err));
+        };
     useEffect(()=>{
         setTimeout(() => {
             setVinho(false)
@@ -30,12 +36,10 @@ export default function App(){
     },[])
     return(vinho?<Vinheta/>:
         <Fundo>
-            
         {isOpen?
         <Tela style={{marginRight:'12px',background:'transparent'}}>
-            <BotaoWpp handle={mandarWpp}/>
             <Menu>
-                <img src={logo}/>
+                <img src={logoBranco}/>
                 <Xis onClick={() => setIsOpen(!isOpen)}>
                     <Line isOpen={isOpen} />
                     <Line isOpen={isOpen} />
@@ -96,20 +100,25 @@ export default function App(){
                     <Conteudo>
                     <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
                     <h3>Atualmente sou Professor de Psicologia na UniLaSalle. Também sou Mestre e Doutorando em Psicologia Clínica pela PUC-Rio. Minha formação universitária também inclui os cursos de Graduação em Psicologia e em Administração pela UFRJ. Por fim, realizo minha Especialização em Neuropsicologia pelo Instituto de Ensino Albert Einstein. </h3>
-                    <Botao texto={'SAIBA MAIS'} fundo={'#ffffff'} fundoHover={'#C8CED0'} style={{margin:'100px 0 40px 0',color:'#292F36'}} />
+                    <Botao texto={'SAIBA MAIS'} fundo={'#ffffff'} fundoHover={'#C8CED0'} style={{margin:'40px 0 40px 0',color:'#292F36'}} />
                     <img style={{borderRadius:'50%'}} src={perfil} />
                     </Conteudo>
                 </Servicos>
                 <Consultorios style={{marginBottom:'50px'}}>
                     <Conteudo>
                     <Titulo nome='Ficou com dúvidas?'  style={{background:'var(--fundo'}} />
-                    <h2>Se você quer entender melhor como funciona a avaliação psicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
+                    <h2>Se você quer entender melhor como funciona a Avaliação Neuropsicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
                     <h2>Estou à disposição para esclarecer suas dúvidas e te ajudar a seguir com mais clareza.</h2>
-                    <Insta href="https://www.instagram.com/janainafaro.neuropsi">
+                    <Insta style={{marginTop:'10px'}} href="https://www.instagram.com/janainafaro.neuropsi">
                         <FaInstagram style={{ color: '#925029', fontSize: '24px' }} />
                         <p>janainafaro.neuropsi</p>
                     </Insta>
-                    <h2 style={{marginBottom:'150px'}}>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
+                    <Insta onClick={copiarTexto}>
+                        <IoMailOutline style={{ color: '#925029', fontSize: '24px' }} />
+                        <p>janainafaro.neuropsi@gmail.com</p>
+                        {copiado?<aside>Email copiado!</aside>:<></>}
+                    </Insta>
+                    <h2 style={{marginBottom:'100px'}}>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
                     </Conteudo>
                 </Consultorios>
             </Resto>
@@ -132,10 +141,14 @@ overflow-x:hidden;
   }
 `
 const Insta=styled.a`
+cursor:pointer;position:relative;
+width:360px;
 display:flex;align-items:center;
  text-decoration: none;
-  color: inherit;margin:20px 0 0 0;
+  color: inherit;
   p{margin-left:10px;}
+aside{border-radius:5px;color:var(--fundo);padding:3px;
+position:absolute;top:45px;background:var(--detalhe)}
 `
 const Conteudo=styled.div`
 flex-direction:column;
@@ -210,7 +223,7 @@ color:var(--fundo);
 h2{font-size:24px;font-weight:600;margin:0}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
-img{width:300px;margin:40px 0 20px 0}
+img{width:300px;margin:0px 0 20px 0}
 `
 const Consultorios=styled.div`
 background:var(--fundo);
@@ -247,7 +260,7 @@ font-family: "Poppins", sans-serif;
 h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
 margin:0;font-family: "Dancing Script", cursive;}
 
-h3{width:100%;font-size:22px;font-weight:600;margin:0 0 10px 0;}
+h3{width:100%;font-size:20px;font-weight:600;margin:0 0 10px 0;}
 h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
 }
