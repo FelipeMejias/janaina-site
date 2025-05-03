@@ -26,7 +26,7 @@ export default function App(){
     useEffect(()=>{
         setTimeout(() => {
             setVinho(false)
-        }, 1000);
+        }, 1200);
     },[])
     return(vinho?<Vinheta/>:
         <Fundo>

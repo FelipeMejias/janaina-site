@@ -13,16 +13,16 @@ Nem sempre chegamos com tudo definido — às vezes, o mais importante é dar o 
 É nesse espaço inicial que começamos a cuidar daquilo que precisa ser visto com mais profundidade.
 `,icone:"🌱"},
 {titulo:'Dar nome ao que te trouxe até aqui',texto:`
-No primeiro encontro, escutamos sua história, entendemos o motivo da sua busca e começamos a organizar o que precisa ser investigado.
+No primeiro encontro, escuto sua história, compreendo o motivo da sua busca e juntos começamos a organizar o que precisa ser investigado.
 `,icone:"💬"},
 {titulo:'Investigar com profundidade',texto:`
 A partir da escuta, iniciamos a testagem, sempre escolhida de forma individualizada, para compreender a fundo como você pensa, reage e se organiza no dia a dia.
 `,icone:"🔍"},
 {titulo:'Integrar e direcionar',texto:`
-Na devolutiva, não entregamos apenas um laudo, mas uma visão clara das dificuldades e potencialidades identificadas, com sugestões de caminhos mais assertivos para promover qualidade de vida.
+Na devolutiva, não entrego apenas um laudo, mas uma visão clara das dificuldades e potencialidades identificadas, com sugestões de caminhos mais assertivos para promover qualidade de vida.
 `,icone:"🌀"},
-{titulo:'Você merece entender o que sente',texto:`
-E saber o que fazer com isso. Esse é o propósito do Nomear para Transformar.
+{titulo:'Você merece entender o que sente. E saber o que fazer com isso',texto:`
+Esse é o propósito do Nomear para Transformar.
 `,icone:"✨"},
     ]
     return(
