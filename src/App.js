@@ -98,7 +98,7 @@ export default function App(){
                     <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
                     <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
                     <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 
-                    <h4 style={{marginBottom:'25px'}}>Explore os cards abaixo e conheça nossa proposta:</h4>
+                    <h4 style={{marginBottom:'25px'}}>Explore os cards abaixo e conheça essa proposta:</h4>
                     {/*<h1>Vamos conversar?</h1>*/}
                     {/*<Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />*/}
                    

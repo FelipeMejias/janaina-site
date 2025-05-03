@@ -22,7 +22,7 @@ Tem percebido mudanças recentes em sua forma de pensar, agir ou lidar com as pe
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Para quem é meu trabalho' fonte={24} style={{justifyContent:'center'}} />
+                <Titulo nome='Para quem é meu trabalho' noGrude={true} fonte={24} style={{justifyContent:'center'}} />
                 <Carrossel>
                     {cards.map(card=><Card>
                         {/*<p style={{fontSize:'50px'}}>{card.icone}</p>*/}
