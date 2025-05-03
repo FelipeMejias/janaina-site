@@ -93,7 +93,7 @@ export default function App(){
                     <Conteudo>
                     {/*<h1>Seja bem-vindo(a)!</h1>*/}
                     <Titulo nome='Prazer, Janaina Faro'  style={{background:'var(--fundo'}} />
-                    <h3>Sou Psicóloga Especialista em Avaliação Neuropsicológica.</h3>
+                    <h3>Sou Psicóloga Especialista em Avaliação Neuropsicológica</h3>
                     <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
                     <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
                     <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 
@@ -142,7 +142,7 @@ export default function App(){
                         <p>janainafaro.neuropsi@gmail.com</p>
                         {copiado?<aside>Email copiado!</aside>:<></>}
                     </Insta>
-                    <h2 style={{marginBottom:'80px'}}>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
+                    <h5>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h5>
                     <Marker ref={markerRef} />
                     </Conteudo>
                 </Consultorios>
@@ -153,7 +153,7 @@ export default function App(){
 }
 const Marker = styled.div`
   height: 5px;width:100%;background:;
-  margin-bottom:0px;
+  margin-bottom:10px;
 `;
 const Fundo=styled.div`
 width:100dvw;height:100dvh;
@@ -266,6 +266,8 @@ color:var(--texto);
 h2{font-size:18px;font-weight:400;margin:20px 0 0 0;span{font-weight:500;}}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
+h5{font-size:18px;font-weight:400;margin:20px 0 80px 0;}
+
 strong{
 font-weight:600;
 }
@@ -276,7 +278,9 @@ justify-content:space-between;
 max-width:600px;
 }
 iframe{border:0;border-radius:10px;margin:0 0 40px 0}
-
+@media(min-width:850px){
+h5{margin:0 0 140px 0}
+}
 `
 const Intro=styled.div`
 

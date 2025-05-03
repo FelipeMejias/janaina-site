@@ -26,7 +26,7 @@ p{display:none;width:210px;font-weight:500;font-size:18px;justify-content:center
 &:hover{background:#2cba60;}
 ${p=>p.g?'&:hover{width:280px;p{display:flex;}}':''}
 @media(min-width:850px){
-right:calc(50vw - 410px);
+right:${p=>p.g?'calc(50vw - 410px)':'calc(50vw - 140px)'};
 }
 h6{display:flex;width:210px;font-size:18px;justify-content:center;font-weight:500;}
  transition: all 0.2s ease; 
