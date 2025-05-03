@@ -146,7 +146,7 @@ export default function App(){
                         {copiado?<aside>Email copiado!</aside>:<></>}
                     </Insta>
                     <h5>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h5>
-                    <Marker ref={markerRef} />
+                    {/*<Marker ref={markerRef} />*/}
                     </Conteudo>
                 </Consultorios>
             </Resto>

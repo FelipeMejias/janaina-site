@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { FaWhatsapp } from 'react-icons/fa';
-export default function BotaoWpp({handle,grande}){
-
+export default function BotaoWpp({handle}){
+const grande=true
     return(
         <Bot g={grande} onClick={handle}>
            

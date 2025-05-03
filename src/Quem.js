@@ -22,11 +22,11 @@ Tem percebido mudanças recentes em sua forma de pensar, agir ou lidar com as pe
     return(
         <Servicos>
             <Conteudo>
-                <h1><span>Para quem é meu trabalho</span></h1>
+                <Titulo nome='Para quem é meu trabalho' fonte={24} style={{justifyContent:'center'}} />
                 <Carrossel>
                     {cards.map(card=><Card>
                         {/*<p style={{fontSize:'50px'}}>{card.icone}</p>*/}
-                        <h1>{card.titulo}</h1>
+                        <h3>{card.titulo}</h3>
                         <p>{card.texto}</p>
                     </Card>)}
                 </Carrossel>
@@ -53,7 +53,7 @@ max-width:180px;
 font-size:30px;
 height:100%;
 p{margin:5px;font-size:14px;text-align:center;}
-h1{margin:5px;font-size:18px;font-weight:600;text-align:center;}
+h3{margin:5px;font-size:17px;font-weight:500;text-align:center;}
 `
 const Seta=styled.div`
 align-items:center;position:absolute;
@@ -76,9 +76,9 @@ width:100%;align-items:center;
 padding:0;
 font-family: "Poppins", sans-serif;
 color:var(--fundo);
+
 h2{background:transparent;font-size:26px;font-weight:400;color:var(--fundo);
 margin:0 0 40px 0;font-family: "Dancing Script", cursive;background:transparent;
-
 }
 img{width:300px;margin:40px 0 20px 0}
  @media(max-width:850px){h1{top:0}}

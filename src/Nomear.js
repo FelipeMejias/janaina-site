@@ -9,8 +9,7 @@ export default function Nomear(){
     const [atual,setAtual]=useState(0)
     const cards=[
 {titulo:'O início de um olhar mais atento',texto:`
-Nem sempre chegamos com tudo definido — às vezes, o mais importante é dar o primeiro passo.
-É nesse espaço inicial que começamos a cuidar daquilo que precisa ser visto com mais profundidade.
+Nem sempre temos todas as respostas — e tudo bem. O importante é dar o primeiro passo e começar a olhar com mais atenção para o que está pedindo cuidado.
 `,icone:"🌱"},
 {titulo:'Dar nome ao que te trouxe até aqui',texto:`
 No primeiro encontro, escuto sua história, compreendo o motivo da sua busca e juntos começamos a organizar o que precisa ser investigado.
@@ -28,15 +27,15 @@ Esse é o propósito do Nomear para Transformar.
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Nomear para Transformar' style={{background:'var(--fundo2',justifyContent:'center'}} />
+                <Titulo nome='Nomear para Transformar' fonte={24} style={{background:'var(--fundo2',justifyContent:'center'}} />
                 <Carrossel>
-                    {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
+                    {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-70px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
                     <Card>
                         <p style={{fontSize:'50px'}}>{cards[atual].icone}</p>
                         <h1>{cards[atual].titulo}</h1>
                         <p>{cards[atual].texto}</p>
                     </Card>
-                    {atual!=4?<Seta onClick={()=>setAtual(atual+1)} style={{right:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowRight /></Seta>:<Seta/>}
+                    {atual!=4?<Seta onClick={()=>setAtual(atual+1)} style={{right:'-70px',fontSize:'36px',cursor:'pointer'}}><SlArrowRight /></Seta>:<Seta/>}
                 </Carrossel>
                 <Bolinhas>
                     {cards.map((c,i)=><Bolinha selec={i==atual}/>)}
@@ -52,10 +51,10 @@ background:${p=>p.selec?'white':'#6b381b'};
 const Bolinhas=styled.div`
 align-items:center;justify-content:center;
 `
-const Card=styled.div`
+const Card=styled.div`background:;
 flex-direction:column;
 align-items:center;
-width:calc(100% - 140px);
+width:calc(100% - 80px);
 max-width:460px;
 font-size:30px;
 p{margin:5px;font-size:16px;text-align:center;}

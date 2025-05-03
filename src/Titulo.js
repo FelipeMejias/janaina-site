@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export default function Titulo({nome,style}){
+export default function Titulo({nome,style,fonte}){
     return(
         <Holder style={style}>
-        <P><span>{nome}</span></P>
+        <P fonte={fonte||26}><span>{nome}</span></P>
         </Holder>
     )
 }
@@ -18,6 +18,6 @@ top:0px;
 }
 `
 const P=styled.p`
-font-size:26px;font-weight:600;
+font-size:${p=>p.fonte}px;font-weight:600;
 margin:0
 `
