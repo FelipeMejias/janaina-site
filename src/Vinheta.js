@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import j from './imgs/jb2.png';
-import f from './imgs/fb2.png';
+import j from './imgs/jn.png';
+import f from './imgs/fn.png';
 
 const tamanho = 250;
 
