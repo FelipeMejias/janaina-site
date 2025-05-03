@@ -5,6 +5,8 @@ body {
     --sublinhado:#ada671;
     --claro:#978d4a;
     --fundo:#e2ceb3;
+    --fundo2:#925029;
+    --texto:#292F36;
   }
 div{
     display:flex;

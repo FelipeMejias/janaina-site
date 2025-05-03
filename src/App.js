@@ -7,6 +7,8 @@ import perfil from './perfil.jpg'
 import { useState } from "react";
 import Botao from "./Botao"
 import { FaInstagram } from 'react-icons/fa';
+import BotaoWpp from "./BotaoWpp"
+import Nomear from "./Nomear"
 
 //import dayjs from 'dayjs'
 export default function App(){
@@ -44,31 +46,15 @@ export default function App(){
                     <h3>Sou Psicóloga Especialista em Avaliação Neuropsicológica.</h3>
                     <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
                     <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
-                    <h4>✨ Você merece entender o que sente. E saber o que fazer com isso. Esse é o propósito do <span>Nomear para Transformar</span>.</h4>
+                    <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 
+                    <h4>Explore os cards abaixo e conheça nossa proposta:</h4>
                     {/*<h1>Vamos conversar?</h1>*/}
-                    <Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />
-                    <img src={foto} />
+                    {/*<Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />*/}
+                    <BotaoWpp handle={mandarWpp}/>
+                    {/*<img src={foto} />*/}
                     </Conteudo>
                 </Intro>
-                <Servicos>
-                    <Conteudo>
-                    <h1><span>Meus Serviços</span></h1>
-                    {/*<img src={foto} />*/}
-                    <h2><span>Avaliação Terapêutica</span></h2>
-                    <h3>A Avaliação Neuropsicológica vai além do diagnóstico – é uma oportunidade de autoconhecimento e crescimento. Inspirada na Avaliação Terapêutica, desenvolvida em Houston, Texas, minha abordagem ajuda a compreender seu perfil cognitivo e emocional de forma profunda, com ou sem um psicodiagnóstico.
-                        Trabalho com adultos e idosos.</h3>
-                    
-                    <img src={foto} />
-                    <h2><span>Avaliação Neuropsicológica</span></h2>
-                    <h3>É um processo que investiga funções cognitivas como memória, atenção e raciocínio, auxiliando no diagnóstico e planejamento de intervenções para condições neurológicas e psicológicas.
-                        Trabalho com adultos e idosos.</h3>
-
-                    <img src={foto} />
-                    <h2><span>Cursos, Palestras e Workshops</span></h2>
-                    <h3>Ofereço cursos, palestras e workshops sobre diversos temas da psicologia para alunos e profissionais. Trabalho com pessoas físicas e jurídicas.
-                        Entre em contato!</h3>
-                    </Conteudo>
-                </Servicos>
+                <Nomear/>
                 <Consultorios>
                     <Conteudo>
                     <h1><span>Consultório</span></h1>
@@ -91,13 +77,13 @@ export default function App(){
                     <img style={{borderRadius:'50%'}} src={perfil} />
                     </Conteudo>
                 </Servicos>
-                <Consultorios>
+                <Consultorios style={{marginBottom:'50px'}}>
                     <Conteudo>
                     <h1><span>Ficou com dúvidas?</span></h1>
                     <h2>Se você quer entender melhor como funciona a avaliação psicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
                     <h2>Estou à disposição para esclarecer suas dúvidas e te ajudar a seguir com mais clareza.</h2>
                     <Insta href="https://www.instagram.com/janainafaro.neuropsi">
-                        <FaInstagram style={{ color: '#E1306C', fontSize: '24px' }} />
+                        <FaInstagram style={{ color: '#925029', fontSize: '24px' }} />
                         <p>janainafaro.neuropsi</p>
                     </Insta>
                     <h2>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
@@ -127,10 +113,12 @@ const Consultorios=styled.div`
 flex-direction:column;
 
 width:100%;align-items:center;
-padding:30px;
+padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
-color:#292F36;
-h1{z-index:4;width:100%;height:70px;background:var(--fundo);position:sticky;top:0;width:100%;font-size:32px;font-weight:600;margin:15px 0 30px 0;}
+color:var(--texto);
+h1{display:flex;align-items:center;
+z-index:4;width:100%;height:70px;background:var(--fundo);
+position:sticky;top:0;width:100%;font-size:32px;font-weight:600;margin:0}
 h2{font-size:18px;font-weight:400;margin:15px 0 30px 0;span{font-weight:500;}}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
@@ -184,15 +172,18 @@ flex-direction:column;
 align-items:center;
 height:calc(100% - 80px);width:100%;
 overflow:auto;
+position:relative;
 `
 const Servicos=styled.div`
-background:#292F36;
+background:var(--fundo2);
 flex-direction:column;
 width:100%;align-items:center;
-padding:30px;
+padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
-color:white;
-h1{z-index:4;width:100%;text-align:center;height:70px;background:#292F36;position:sticky;top:0;font-size:32px;font-weight:600;margin:15px 0 30px 0;}
+color:var(--fundo);
+h1{display:flex;align-items:center;justify-content:center;
+z-index:4;width:100%;text-align:center;height:80px;background:var(--fundo2);
+position:sticky;top:0;font-size:32px;font-weight:600;margin:0}
 h2{font-size:24px;font-weight:600;margin:15px 0 30px 0;}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
@@ -202,12 +193,13 @@ h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 const Intro=styled.div`
 flex-direction:column;
 width:100%;align-items:center;
-padding:30px;
-color:#292F36;
+padding:0 30px 0 30px;
+color:var(--texto);
 font-family: "Poppins", sans-serif;
-h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);margin:0;font-family: "Dancing Script", cursive;}
-h2{z-index:4;width:100%;height:90px;background:var(--fundo);position:sticky;top:0;
-width:100%;font-size:33px;font-weight:600;margin:10px 0 10px 0;}
+h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
+margin:0;font-family: "Dancing Script", cursive;}
+h2{z-index:4;width:100%;height:80px;background:var(--fundo);position:sticky;
+top:0;width:100%;font-size:33px;font-weight:600;margin:0}
 h3{width:100%;font-size:22px;font-weight:600;margin:0;}
 h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
