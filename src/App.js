@@ -5,7 +5,7 @@ import sala1 from './imgs/consultorio1.jpg'
 import sala2 from './imgs/consultorio2.jpg'
 import foto from './imgs/perfil2.jpg'
 import perfil from './imgs/perfil.jpg'
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Botao from "./Botao"
 import { FaInstagram } from 'react-icons/fa';
 import { IoMailOutline } from "react-icons/io5";
@@ -34,6 +34,30 @@ export default function App(){
             setVinho(false)
         }, 1200);
     },[])
+
+    const markerRef = useRef(null);
+    const [showButton, setShowButton] = useState(false);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          // Quando o marcador SAI da tela, mostramos o botão
+          setShowButton(!entry.isIntersecting);
+        },
+        { threshold: 0 }
+      );
+  
+      if (markerRef.current) {
+        observer.observe(markerRef.current);
+      }
+  
+      return () => {
+        if (markerRef.current) {
+          observer.unobserve(markerRef.current);
+        }
+      };
+    }, []);
+
     return(vinho?<Vinheta/>:
         <Fundo>
         {isOpen?
@@ -56,7 +80,7 @@ export default function App(){
             </Acessos>
         </Tela>
         :<Tela>
-            <BotaoWpp handle={mandarWpp}/>
+            <BotaoWpp grande={showButton} handle={mandarWpp}/>
             <Menu style={{background:'var(--fundo)'}}>
                 <img src={logo}/>
                 <Xis onClick={() => setIsOpen(!isOpen)}>
@@ -118,7 +142,8 @@ export default function App(){
                         <p>janainafaro.neuropsi@gmail.com</p>
                         {copiado?<aside>Email copiado!</aside>:<></>}
                     </Insta>
-                    <h2 style={{marginBottom:'100px'}}>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
+                    <h2 style={{marginBottom:'80px'}}>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
+                    <Marker ref={markerRef} />
                     </Conteudo>
                 </Consultorios>
             </Resto>
@@ -126,6 +151,10 @@ export default function App(){
         </Fundo>
     )
 }
+const Marker = styled.div`
+  height: 5px;width:100%;background:;
+  margin-bottom:0px;
+`;
 const Fundo=styled.div`
 width:100dvw;height:100dvh;
 justify-content:center;
@@ -265,6 +294,9 @@ h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px
 span{font-weight:500;}
 }
   img{width:300px;}
+@media(min-width:850px){
+h3{margin-top:80px;}
+}
 `
 const Xis = styled.div`
   width: 80px;
