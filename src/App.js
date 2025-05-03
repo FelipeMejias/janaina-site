@@ -22,9 +22,18 @@ export default function App(){
         }
     return(
         <Fundo>
-        <Tela>
-        <BotaoWpp handle={mandarWpp}/>
-            {isOpen?<Acessos>
+            
+        {isOpen?
+        <Tela style={{marginRight:'12px',background:'transparent'}}>
+            <BotaoWpp handle={mandarWpp}/>
+            <Menu>
+                <img src={logo}/>
+                <Xis onClick={() => setIsOpen(!isOpen)}>
+                    <Line isOpen={isOpen} />
+                    <Line isOpen={isOpen} />
+                </Xis>
+            </Menu>
+            <Acessos>
                 <section>
                 <h1>Serviços</h1>
                 <h1>Quem sou?</h1>
@@ -32,7 +41,10 @@ export default function App(){
                 <h1>Rescursos</h1>
                 </section>
                 <Botao  handle={mandarWpp} texto={'Agende agora'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
-            </Acessos>:<></>}
+            </Acessos>
+        </Tela>
+        :<Tela>
+            <BotaoWpp handle={mandarWpp}/>
             <Menu>
                 <img src={logo}/>
                 <Xis onClick={() => setIsOpen(!isOpen)}>
@@ -92,14 +104,20 @@ export default function App(){
                     </Conteudo>
                 </Consultorios>
             </Resto>
-        </Tela>
+        </Tela>}
         </Fundo>
     )
 }
 const Fundo=styled.div`
 width:100dvw;height:100dvh;
-background:yellow;
 justify-content:center;
+overflow-y:auto;
+overflow-x:hidden;
+ background: 
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+ url('/estilo.jpeg');
+ background-size: cover;
+  background-position: center;
 `
 const Insta=styled.a`
 display:flex;align-items:center;
@@ -118,8 +136,9 @@ width:100%;
 img{width:calc(50% - 10px);};
 `
 const Consultorios=styled.div`
+background:var(--fundo);
 flex-direction:column;
-max-width:700px;
+
 width:100%;align-items:center;
 padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
@@ -141,12 +160,13 @@ max-width:600px;
 }
 iframe{border:0;border-radius:10px;}
 `
-const Acessos=styled.div`
+const Acessos=styled.div`margin-right:200px;
 flex-direction:column;
 justify-content:space-evenly;
 align-items:center;
+max-width:850px;position:absolute;
 height:100dvh;width:100dvw;
-background:var(--fundo);
+color:white;
 position:fixed;top:0;z-index:5;
 section{
 display:flex;flex-direction:column;align-items:center;width:100%;
@@ -160,7 +180,7 @@ const Tela=styled.div`
 position:relative;
 flex-direction:column;
 height:100dvh;width:100dvw;
-max-width:700px;
+max-width:850px;
 background:var(--fundo);
 img{border-radius:10px;}
 span{
@@ -182,8 +202,7 @@ const Resto=styled.div`
 flex-direction:column;
 align-items:center;
 height:calc(100% - 80px);width:100%;
-overflow-y:auto;
-overflow-x:hidden;
+
 position:relative;
 
 `
@@ -192,7 +211,7 @@ background:var(--fundo2);
 flex-direction:column;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
-max-width:700px;
+
 font-family: "Poppins", sans-serif;
 color:var(--fundo);
 h1{display:flex;align-items:center;justify-content:center;
@@ -205,6 +224,7 @@ h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
   img{width:300px;margin:40px 0 20px 0}
 `
 const Intro=styled.div`
+
 flex-direction:column;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
@@ -215,8 +235,8 @@ h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
 margin:0;font-family: "Dancing Script", cursive;}
 h2{z-index:4;width:100%;height:80px;background:var(--fundo);position:sticky;
 top:0;width:100%;font-size:30px;font-weight:600;margin:0}
-h3{width:100%;font-size:22px;font-weight:600;margin:0;}
-h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:0;
+h3{width:100%;font-size:22px;font-weight:600;margin:0 0 10px 0;}
+h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
 }
 
@@ -239,7 +259,7 @@ const Line = styled.div`
   position: absolute;
   width: 32px;
   height: 2px;
-  background-color: black;
+  background-color: ${({isOpen})=>isOpen?'white':'var(--detalhe)'};
   transition: transform 0.3s ease, opacity 0.3s ease;
   
   &:first-child {
