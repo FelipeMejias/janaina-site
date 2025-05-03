@@ -13,6 +13,7 @@ import BotaoWpp from "./BotaoWpp"
 import Nomear from "./Nomear"
 import Vinheta from "./Vinheta"
 import Titulo from "./Titulo"
+import Quem from "./Quem"
 
 //import dayjs from 'dayjs'
 export default function App(){
@@ -105,6 +106,7 @@ export default function App(){
                     </Conteudo>
                 </Intro>
                 <Nomear/>
+                <Quem/>
                 <Consultorios>
                     <Conteudo>
                     <Titulo nome='Consultório'  style={{background:'var(--fundo'}} />
@@ -123,8 +125,9 @@ export default function App(){
                 <Servicos>
                     <Conteudo>
                     <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
-                    <h3>Atualmente sou Professor de Psicologia na UniLaSalle. Também sou Mestre e Doutorando em Psicologia Clínica pela PUC-Rio. Minha formação universitária também inclui os cursos de Graduação em Psicologia e em Administração pela UFRJ. Por fim, realizo minha Especialização em Neuropsicologia pelo Instituto de Ensino Albert Einstein. </h3>
-                    <Botao texto={'SAIBA MAIS'} fundo={'#ffffff'} fundoHover={'#C8CED0'} style={{margin:'40px 0 40px 0',color:'#292F36'}} />
+                    <h3>Sou psicóloga formada pela PUC-Rio, onde atuei como monitora em disciplinas com enfoque em neurociência e comportamento. Durante a graduação, fui bolsista de Iniciação Científica e participei ativamente de grupos de estudo e pesquisa.</h3>
+                    <h3>Minha experiência clínica começou no Projeto Lótus, com foco nas Terapias Cognitivo-Comportamentais, incluindo a Terapia Comportamental Dialética (DBT). Também fui bolsista de Treinamento e Capacitação Técnica pela FAPERJ, atuando no Programa de Estudos e Assistência ao Uso Indevido de Drogas (PROJAD), no IPUB/UFRJ.</h3>
+                    <h3>Atualmente, curso a Especialização em Neuropsicologia pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein.</h3>
                     <img style={{borderRadius:'50%'}} src={perfil} />
                     </Conteudo>
                 </Servicos>
@@ -211,7 +214,6 @@ position:relative;
 flex-direction:column;
 height:100dvh;width:100dvw;
 max-width:850px;
-background:var(--fundo);
 img{border-radius:10px;}
 span{
 position: relative;
@@ -250,9 +252,9 @@ font-family: "Poppins", sans-serif;
 color:var(--fundo);
 
 h2{font-size:24px;font-weight:600;margin:0}
-h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
-}
-img{width:300px;margin:0px 0 20px 0}
+h3{font-size:18px;line-height:24px;font-weight:400;margin:20px 0 0 0;}
+text-align: justify;}
+img{width:300px;margin:30px 0 30px 0}
 `
 const Consultorios=styled.div`
 background:var(--fundo);
@@ -265,8 +267,8 @@ color:var(--texto);
 
 h2{font-size:18px;font-weight:400;margin:20px 0 0 0;span{font-weight:500;}}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
-}
-h5{font-size:18px;font-weight:400;margin:20px 0 80px 0;}
+text-align: justify;}
+h5{font-size:18px;font-weight:400;margin:20px 0 80px 0;span{font-weight:500;}}
 
 strong{
 font-weight:600;
@@ -283,12 +285,12 @@ h5{margin:0 0 140px 0}
 }
 `
 const Intro=styled.div`
-
+background:var(--fundo);
 flex-direction:column;
 width:100%;align-items:center;
 padding:0 30px 0 30px;
 color:var(--texto);
-max-width:700px;
+max-width:950px;
 font-family: "Poppins", sans-serif;
 h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
 margin:0;font-family: "Dancing Script", cursive;}
