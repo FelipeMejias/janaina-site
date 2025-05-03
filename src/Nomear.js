@@ -27,17 +27,27 @@ Você merece entender o que sente. E saber o que fazer com isso. Esse é o prop�
             <Conteudo>
                 <h1><span>Nomear para Transformar</span></h1>
                 <Carrossel>
-                    {atual!=0?<Seta style={{fontSize:'36px',cursor:'pointer'}}><SlArrowLeft onClick={()=>setAtual(atual-1)}/></Seta>:<Seta/>}
+                    {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
                     <Card>
                         <p style={{fontSize:'50px'}}>{cards[atual].icone}</p>
                         <p>{cards[atual].texto}</p>
                     </Card>
-                    {atual!=4?<Seta style={{fontSize:'36px',cursor:'pointer'}}><SlArrowRight onClick={()=>setAtual(atual+1)}/></Seta>:<Seta/>}
+                    {atual!=4?<Seta onClick={()=>setAtual(atual+1)} style={{right:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowRight /></Seta>:<Seta/>}
                 </Carrossel>
+                <Bolinhas>
+                    {cards.map((c,i)=><Bolinha selec={i==atual}/>)}
+                </Bolinhas>
             </Conteudo>
         </Servicos>
     )
 }
+const Bolinha=styled.div`
+width:10px;height:10px;border-radius:50%;margin:3px;
+background:${p=>p.selec?'white':'#6b381b'};
+`
+const Bolinhas=styled.div`
+align-items:center;justify-content:center;
+`
 const Card=styled.div`
 flex-direction:column;
 align-items:center;
@@ -46,11 +56,11 @@ font-size:30px;
 p{margin:5px;font-size:18px;text-align:center;}
 `
 const Seta=styled.div`
-align-items:center;
-width:60px;justify-content:center;height:100%;
+align-items:center;position:absolute;
+width:150px;justify-content:center;height:100%;
 `
 const Carrossel=styled.div`
-align-items:center;
+align-items:center;position:relative;
 justify-content:space-evenly;
 width:100%;height:300px;margin:30px 0 30px 0;
 `
