@@ -4,15 +4,18 @@ import sala1 from './consultorio1.jpg'
 import sala2 from './consultorio2.jpg'
 import foto from './perfil2.jpg'
 import perfil from './perfil.jpg'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Botao from "./Botao"
 import { FaInstagram } from 'react-icons/fa';
 import BotaoWpp from "./BotaoWpp"
 import Nomear from "./Nomear"
+import Vinheta from "./Vinheta"
+import Titulo from "./Titulo"
 
 //import dayjs from 'dayjs'
 export default function App(){
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
+    const [vinho,setVinho]=useState(true)
     function mandarWpp(){
             const telefone = 5521999242603;
             let texto=""
@@ -20,7 +23,12 @@ export default function App(){
             const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
             window.open(urlWhatsapp);
         }
-    return(
+    useEffect(()=>{
+        setTimeout(() => {
+            setVinho(false)
+        }, 1000);
+    },[])
+    return(vinho?<Vinheta/>:
         <Fundo>
             
         {isOpen?
@@ -45,7 +53,7 @@ export default function App(){
         </Tela>
         :<Tela>
             <BotaoWpp handle={mandarWpp}/>
-            <Menu>
+            <Menu style={{background:'var(--fundo)'}}>
                 <img src={logo}/>
                 <Xis onClick={() => setIsOpen(!isOpen)}>
                     <Line isOpen={isOpen} />
@@ -56,12 +64,12 @@ export default function App(){
                 <Intro>
                     <Conteudo>
                     {/*<h1>Seja bem-vindo(a)!</h1>*/}
-                    <h2><span>Prazer, Janaina Faro</span></h2>
+                    <Titulo nome='Prazer, Janaina Faro'  style={{background:'var(--fundo'}} />
                     <h3>Sou Psicóloga Especialista em Avaliação Neuropsicológica.</h3>
                     <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
                     <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
                     <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 
-                    <h4>Explore os cards abaixo e conheça nossa proposta:</h4>
+                    <h4 style={{marginBottom:'25px'}}>Explore os cards abaixo e conheça nossa proposta:</h4>
                     {/*<h1>Vamos conversar?</h1>*/}
                     {/*<Botao handle={mandarWpp} texto={'AGENDE SUA CONSULTA!'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{margin:'100px 0 40px 0'}} />*/}
                    
@@ -71,8 +79,9 @@ export default function App(){
                 <Nomear/>
                 <Consultorios>
                     <Conteudo>
-                    <h1><span>Consultório</span></h1>
-                    <h2>Atendo de forma <strong>híbrida (presencial e/ou online)</strong>, dependendo do serviço desejado. Meu local de atendimento é nas unidades da <strong>Livance do Rio de Janeiro (Botafogo e Barra da Tijuca)</strong>. Os consultórios são modernos, acolhedores, impecáveis e com localização privilegiada, pensado para te oferecer conforto e privacidade. Ambos os consultórios possuem <strong>estacionamento rotativo no local</strong>.</h2>
+                    <Titulo nome='Consultório'  style={{background:'var(--fundo'}} />
+                    <h2>Atendo presencialmente em um consultório localizado em <span>Botafogo</span>, no Rio de Janeiro.
+                    Um espaço moderno e acolhedor, com vista privilegiada e fácil acesso, pensado para proporcionar bem-estar e conforto em cada atendimento.</h2>
                     <section>
                         <Sala>
                             <img src={sala1} />
@@ -85,7 +94,7 @@ export default function App(){
                 </Consultorios>
                 <Servicos>
                     <Conteudo>
-                    <h1><span>Minha Formação</span></h1>
+                    <Titulo nome='Minha Formação'  style={{background:'var(--fundo2'}} />
                     <h3>Atualmente sou Professor de Psicologia na UniLaSalle. Também sou Mestre e Doutorando em Psicologia Clínica pela PUC-Rio. Minha formação universitária também inclui os cursos de Graduação em Psicologia e em Administração pela UFRJ. Por fim, realizo minha Especialização em Neuropsicologia pelo Instituto de Ensino Albert Einstein. </h3>
                     <Botao texto={'SAIBA MAIS'} fundo={'#ffffff'} fundoHover={'#C8CED0'} style={{margin:'100px 0 40px 0',color:'#292F36'}} />
                     <img style={{borderRadius:'50%'}} src={perfil} />
@@ -93,14 +102,14 @@ export default function App(){
                 </Servicos>
                 <Consultorios style={{marginBottom:'50px'}}>
                     <Conteudo>
-                    <h1><span>Ficou com dúvidas?</span></h1>
+                    <Titulo nome='Ficou com dúvidas?'  style={{background:'var(--fundo'}} />
                     <h2>Se você quer entender melhor como funciona a avaliação psicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
                     <h2>Estou à disposição para esclarecer suas dúvidas e te ajudar a seguir com mais clareza.</h2>
                     <Insta href="https://www.instagram.com/janainafaro.neuropsi">
                         <FaInstagram style={{ color: '#925029', fontSize: '24px' }} />
                         <p>janainafaro.neuropsi</p>
                     </Insta>
-                    <h2>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
+                    <h2 style={{marginBottom:'150px'}}>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h2>
                     </Conteudo>
                 </Consultorios>
             </Resto>
@@ -111,18 +120,21 @@ export default function App(){
 const Fundo=styled.div`
 width:100dvw;height:100dvh;
 justify-content:center;
-overflow-y:auto;
-overflow-x:hidden;
+
  background: 
   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
  url('/estilo.jpeg');
  background-size: cover;
   background-position: center;
+  @media(min-width:850px){
+  overflow-y:auto;
+overflow-x:hidden;
+  }
 `
 const Insta=styled.a`
 display:flex;align-items:center;
  text-decoration: none;
-  color: inherit;
+  color: inherit;margin:20px 0 0 0;
   p{margin-left:10px;}
 `
 const Conteudo=styled.div`
@@ -135,31 +147,7 @@ justify-content:space-between;
 width:100%;
 img{width:calc(50% - 10px);};
 `
-const Consultorios=styled.div`
-background:var(--fundo);
-flex-direction:column;
 
-width:100%;align-items:center;
-padding:0 30px 0 30px;
-font-family: "Poppins", sans-serif;
-color:var(--texto);
-h1{display:flex;align-items:center;
-z-index:4;width:100%;height:70px;background:var(--fundo);
-position:sticky;top:0;width:100%;font-size:32px;font-weight:600;margin:0}
-h2{font-size:18px;font-weight:400;margin:0;span{font-weight:500;}}
-h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
-}
-strong{
-font-weight:600;
-}
-section{
-flex-direction:column;
-display:flex;width:100%;
-justify-content:space-between;
-max-width:600px;
-}
-iframe{border:0;border-radius:10px;}
-`
 const Acessos=styled.div`margin-right:200px;
 flex-direction:column;
 justify-content:space-evenly;
@@ -167,7 +155,7 @@ align-items:center;
 max-width:850px;position:absolute;
 height:100dvh;width:100dvw;
 color:white;
-position:fixed;top:0;z-index:5;
+position:fixed;top:80px;z-index:5;
 section{
 display:flex;flex-direction:column;align-items:center;width:100%;
 
@@ -193,7 +181,7 @@ position: relative;
 const Menu=styled.div`
 justify-content:space-between;
 align-items:center;
-
+position:fixed;max-width:850px;
 height:80px;width:100%;
 img{height:50px;width:50px;margin:0 0 0 10px;}
 z-index:6;
@@ -204,7 +192,11 @@ align-items:center;
 height:calc(100% - 80px);width:100%;
 
 position:relative;
-
+  @media(max-width:850px){
+  overflow-y:auto;
+overflow-x:hidden;
+margin-top:80px;
+  }
 `
 const Servicos=styled.div`
 background:var(--fundo2);
@@ -214,14 +206,35 @@ padding:0 30px 0 30px;
 
 font-family: "Poppins", sans-serif;
 color:var(--fundo);
-h1{display:flex;align-items:center;justify-content:center;
-z-index:4;width:100%;text-align:center;height:80px;background:var(--fundo2);
-position:sticky;top:0;font-size:32px;font-weight:600;margin:0}
+
 h2{font-size:24px;font-weight:600;margin:0}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
+img{width:300px;margin:40px 0 20px 0}
+`
+const Consultorios=styled.div`
+background:var(--fundo);
+flex-direction:column;
 
-  img{width:300px;margin:40px 0 20px 0}
+width:100%;align-items:center;
+padding:0 30px 0 30px;
+font-family: "Poppins", sans-serif;
+color:var(--texto);
+
+h2{font-size:18px;font-weight:400;margin:20px 0 0 0;span{font-weight:500;}}
+h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
+}
+strong{
+font-weight:600;
+}
+section{
+flex-direction:column;
+display:flex;width:100%;
+justify-content:space-between;
+max-width:600px;
+}
+iframe{border:0;border-radius:10px;margin:0 0 40px 0}
+
 `
 const Intro=styled.div`
 
@@ -233,13 +246,11 @@ max-width:700px;
 font-family: "Poppins", sans-serif;
 h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
 margin:0;font-family: "Dancing Script", cursive;}
-h2{z-index:4;width:100%;height:80px;background:var(--fundo);position:sticky;
-top:0;width:100%;font-size:30px;font-weight:600;margin:0}
+
 h3{width:100%;font-size:22px;font-weight:600;margin:0 0 10px 0;}
 h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
 }
-
   img{width:300px;}
 `
 const Xis = styled.div`

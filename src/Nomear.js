@@ -3,6 +3,7 @@ import { TiSpiral } from "react-icons/ti";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
+import Titulo from "./Titulo";
 export default function Nomear(){
     const [atual,setAtual]=useState(0)
     const cards=[
@@ -25,7 +26,7 @@ Você merece entender o que sente. E saber o que fazer com isso. Esse é o prop�
     return(
         <Servicos>
             <Conteudo>
-                <h1><span>Nomear para Transformar</span></h1>
+                <Titulo nome='Minha Formação'  style={{background:'var(--fundo2'}} />
                 <Carrossel>
                     {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-50px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
                     <Card>
@@ -76,12 +77,9 @@ width:100%;align-items:center;
 padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
 color:var(--fundo);min-height:480px;
-h1{display:flex;align-items:center;justify-content:center;
-z-index:4;width:100%;text-align:center;height:80px;background:var(--fundo2);
-position:sticky;top:0;font-size:28px;font-weight:600;margin:0}
 h2{font-size:24px;font-weight:600;margin:15px 0 30px 0;}
 h3{width:80%;font-size:18px;line-height:24px;font-weight:400;margin:0;}
 }
-
-  img{width:300px;margin:40px 0 20px 0}
+img{width:300px;margin:40px 0 20px 0}
+ @media(max-width:850px){h1{top:0}}
 `
