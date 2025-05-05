@@ -125,9 +125,10 @@ export default function App(){
                 <Servicos>
                     <Conteudo>
                     <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
-                    <h3>Sou psicóloga formada pela PUC-Rio, onde atuei como monitora em disciplinas com enfoque em neurociência e comportamento. Durante a graduação, fui bolsista de Iniciação Científica e participei ativamente de grupos de estudo e pesquisa.</h3>
-                    <h3>Minha experiência clínica começou no Projeto Lótus, com foco nas Terapias Cognitivo-Comportamentais, incluindo a Terapia Comportamental Dialética (DBT). Também fui bolsista de Treinamento e Capacitação Técnica pela FAPERJ, atuando no Programa de Estudos e Assistência ao Uso Indevido de Drogas (PROJAD), no IPUB/UFRJ.</h3>
-                    <h3>Atualmente, curso a Especialização em Neuropsicologia pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein.</h3>
+                    <h3>Sou psicóloga formada pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), onde atuei como monitora em disciplinas com foco em neurociências e comportamento.</h3>
+                    <h3> Tenho experiência com as Terapias Cognitivo-Comportamentais, em especial a TCC Clássica e a Terapia Comportamental Dialética (DBT). Minha atuação também inclui o atendimento de pessoas que fazem uso prejudicial de substâncias psicoativas.</h3>
+                    <h3>Fui bolsista de Iniciação Científica, participando ativamente de grupos de estudo e pesquisa nas áreas de psicopatologia, neuropsicologia e saúde mental. Também, fui bolsista de Treinamento e Capacitação Técnica pela FAPERJ, atuando no Programa de Estudos e Assistência ao Uso Indevido de Drogas (PROJAD), no IPUB/UFRJ.</h3>
+                    <h3>Atualmente, curso a Especialização em Neuropsicologia pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein</h3>
                     <img style={{borderRadius:'50%'}} src={perfil} />
                     </Conteudo>
                 </Servicos>
@@ -174,7 +175,7 @@ overflow-x:hidden;
 `
 const Insta=styled.a`
 cursor:pointer;position:relative;
-width:360px;
+width:300px;background:;
 display:flex;align-items:center;
  text-decoration: none;
   color: inherit;

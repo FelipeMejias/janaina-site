@@ -9,20 +9,20 @@ export default function Quem(){
     const [atual,setAtual]=useState(0)
     const cards=[
 {titulo:'Dificuldades no dia a dia',texto:`
-Sente dificuldades de memória, atenção, organização ou tomada de decisões
+Se você sente dificuldades de memória, atenção, organização ou tomada de decisões
 `,icone:"🌱"},
 {titulo:'Sofrimento sem nome',texto:`
-Está em sofrimento emocional e não identifica exatamente por quê
+Caso esteja em sofrimento emocional e não identifique exatamente por quê
     `,icone:"💬"},
 {titulo:'Mudanças internas',texto:`
-Tem percebido mudanças recentes em sua forma de pensar, agir ou lidar com as pessoas
+Caso esteja percebendo mudanças recentes em sua forma de pensar, agir ou lidar com as pessoas
     `,icone:"🔍"},
 
     ]
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Para quem é meu trabalho' noGrude={true} fonte={24} style={{justifyContent:'center'}} />
+                <Titulo nome='Quando a avaliação faz sentido?' noGrude={true} fonte={21} style={{justifyContent:'center'}} />
                 <Carrossel>
                     {cards.map(card=><Card>
                         {/*<p style={{fontSize:'50px'}}>{card.icone}</p>*/}
