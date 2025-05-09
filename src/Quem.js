@@ -22,7 +22,7 @@ Caso esteja percebendo mudanças recentes em sua forma de pensar, agir ou lidar 
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Quando a avaliação faz sentido?' noGrude={true} fonte={21} style={{justifyContent:'center'}} />
+                <Titulo nome='Quando a avaliação faz sentido?' noGrude={true} fonte={19} style={{justifyContent:'center'}} />
                 <Carrossel>
                     {cards.map(card=><Card>
                         {/*<p style={{fontSize:'50px'}}>{card.icone}</p>*/}
@@ -78,6 +78,7 @@ font-family: "Poppins", sans-serif;
 color:var(--fundo);
 
 h2{background:transparent;font-size:26px;font-weight:400;color:var(--fundo);
+text-align:center;width:250px;
 margin:0 0 40px 0;font-family: "Dancing Script", cursive;background:transparent;
 }
 img{width:300px;margin:40px 0 20px 0}

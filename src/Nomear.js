@@ -27,7 +27,7 @@ Esse é o propósito do Nomear para Transformar.
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Nomear para Transformar' fonte={24} style={{background:'var(--fundo2',justifyContent:'center'}} />
+                <Titulo nome='Nomear para Transformar' fonte={21} style={{background:'var(--fundo2',justifyContent:'center'}} />
                 <Carrossel>
                     {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-70px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
                     <Card>
@@ -54,8 +54,8 @@ align-items:center;justify-content:center;
 const Card=styled.div`background:;
 flex-direction:column;
 align-items:center;
-width:calc(100% - 80px);
-max-width:460px;
+width:calc(100% - 40px);
+max-width:500px;
 font-size:30px;
 p{margin:5px;font-size:16px;text-align:center;}
 h1{margin:5px;font-size:19px;font-weight:600;text-align:center;}

@@ -14,6 +14,7 @@ import Nomear from "./Nomear"
 import Vinheta from "./Vinheta"
 import Titulo from "./Titulo"
 import Quem from "./Quem"
+import Duvidas from "./Duvidas"
 
 //import dayjs from 'dayjs'
 export default function App(){
@@ -94,7 +95,7 @@ export default function App(){
                     <Conteudo>
                     {/*<h1>Seja bem-vindo(a)!</h1>*/}
                     <Titulo nome='Prazer, Janaina Faro'  style={{background:'var(--fundo'}} />
-                    <h3>Sou Psicóloga Especialista em Avaliação Neuropsicológica</h3>
+                    <h3>Sou Psicóloga Pós-Graduanda em Avaliação Neuropsicológica</h3>
                     <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
                     <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
                     <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 
@@ -125,7 +126,7 @@ export default function App(){
                 <Servicos>
                     <Conteudo>
                     <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
-                    <h3>Sou psicóloga formada pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), onde atuei como monitora em disciplinas com foco em neurociências e comportamento.</h3>
+                    <h3>Sou psicóloga (CRP 05/75316) formada pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), onde atuei como monitora em disciplinas com foco em neurociências e comportamento.</h3>
                     <h3> Tenho experiência com as Terapias Cognitivo-Comportamentais, em especial a TCC Clássica e a Terapia Comportamental Dialética (DBT). Minha atuação também inclui o atendimento de pessoas que fazem uso prejudicial de substâncias psicoativas.</h3>
                     <h3>Fui bolsista de Iniciação Científica, participando ativamente de grupos de estudo e pesquisa nas áreas de psicopatologia, neuropsicologia e saúde mental. Também, fui bolsista de Treinamento e Capacitação Técnica pela FAPERJ, atuando no Programa de Estudos e Assistência ao Uso Indevido de Drogas (PROJAD), no IPUB/UFRJ.</h3>
                     <h3>Atualmente, curso a Especialização em Neuropsicologia pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein</h3>
@@ -134,7 +135,7 @@ export default function App(){
                 </Servicos>
                 <Consultorios style={{marginBottom:'50px'}}>
                     <Conteudo>
-                    <Titulo nome='Ficou com dúvidas?'  style={{background:'var(--fundo'}} />
+                    <Titulo nome='Ficou com dúvidas?'  style={{background:'var(--fundo)'}} />
                     <h2>Se você quer entender melhor como funciona a Avaliação Neuropsicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
                     <h2>Estou à disposição para esclarecer suas dúvidas e te ajudar a seguir com mais clareza.</h2>
                     <Insta style={{marginTop:'10px'}} href="https://www.instagram.com/janainafaro.neuropsi">
@@ -150,6 +151,7 @@ export default function App(){
                     {/*<Marker ref={markerRef} />*/}
                     </Conteudo>
                 </Consultorios>
+                <Duvidas/>
             </Resto>
         </Tela>}
         </Fundo>
