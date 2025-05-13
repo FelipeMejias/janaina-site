@@ -51,12 +51,15 @@ background:${p=>p.selec?'white':'#6b381b'};
 const Bolinhas=styled.div`
 align-items:center;justify-content:center;
 `
-const Card=styled.div`background:;
+const Card=styled.div`
+padding:15px 5px 15px 5px;
+background:rgb(255,255,255,0.1);
 flex-direction:column;
 align-items:center;
-width:calc(100% - 40px);
+width:calc(100% - 60px);
 max-width:500px;
 font-size:30px;
+border-radius:15px;
 p{margin:5px;font-size:16px;text-align:center;}
 h1{margin:5px;font-size:19px;font-weight:600;text-align:center;}
 `

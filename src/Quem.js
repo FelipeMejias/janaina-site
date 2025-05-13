@@ -43,12 +43,12 @@ const Bolinhas=styled.div`
 align-items:center;justify-content:center;
 `
 const Card=styled.div`
-background:rgb(0,0,0,0.3);
+background:rgb(255,255,255,0.5);
 flex-direction:column;
 align-items:center;
 border-radius:15px;
 width:30%;
-color:var(--fundo);
+color:var(--texto);
 max-width:180px;
 font-size:30px;
 height:100%;
