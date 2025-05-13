@@ -15,6 +15,7 @@ import Vinheta from "./Vinheta"
 import Titulo from "./Titulo"
 import Quem from "./Quem"
 import Duvidas from "./Duvidas"
+import Recebe from "./Recebe"
 
 //import dayjs from 'dayjs'
 export default function App(){
@@ -123,6 +124,7 @@ export default function App(){
                     </section>
                     </Conteudo>
                 </Consultorios>
+                <Recebe />
                 <Servicos>
                     <Conteudo>
                     <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
@@ -133,11 +135,12 @@ export default function App(){
                     <img style={{borderRadius:'50%'}} src={perfil} />
                     </Conteudo>
                 </Servicos>
+                <Duvidas/>
                 <Consultorios style={{marginBottom:'50px'}}>
                     <Conteudo>
-                    <Titulo nome='Ficou com dúvidas?'  style={{background:'var(--fundo)'}} />
+                    <Titulo nome='Ainda com dúvidas?'  style={{background:'var(--fundo)'}} />
                     <h2>Se você quer entender melhor como funciona a Avaliação Neuropsicológica ou se ela faz sentido para o seu momento, <span>entre em contato</span> e me acompanhe pelo Instagram.</h2>
-                    <h2>Estou à disposição para esclarecer suas dúvidas e te ajudar a seguir com mais clareza.</h2>
+                    <h2>Estou à disposição para te ajudar a seguir com mais clareza.</h2>
                     <Insta style={{marginTop:'10px'}} href="https://www.instagram.com/janainafaro.neuropsi">
                         <FaInstagram style={{ color: '#925029', fontSize: '24px' }} />
                         <p>janainafaro.neuropsi</p>
@@ -151,7 +154,7 @@ export default function App(){
                     {/*<Marker ref={markerRef} />*/}
                     </Conteudo>
                 </Consultorios>
-                <Duvidas/>
+                
             </Resto>
         </Tela>}
         </Fundo>
