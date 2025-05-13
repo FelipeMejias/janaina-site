@@ -37,7 +37,7 @@ Esse é o propósito do Nomear para Transformar.
 
   const handleTouchEnd = () => {
     const delta = touchStartX.current - touchEndX.current;
-    const limite = 30; // mínimo de px pra considerar um swipe
+    const limite = 50; // mínimo de px pra considerar um swipe
 
     if (delta > limite) {
       // Swipe para ESQUERDA (próxima imagem)
