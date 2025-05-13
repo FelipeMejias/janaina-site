@@ -100,7 +100,7 @@ width:150px;justify-content:center;height:100%;
 const Carrossel=styled.div`
 align-items:center;position:relative;
 justify-content:space-evenly;
-width:100%;height:300px;margin:30px 0 30px 0;
+width:100%;height:320px;margin:30px 0 30px 0;
 `
 const Conteudo=styled.div`
 flex-direction:column;

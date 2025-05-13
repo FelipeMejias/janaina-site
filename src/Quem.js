@@ -30,18 +30,12 @@ Caso esteja percebendo mudanças recentes em sua forma de pensar, agir ou lidar 
                         <p>{card.texto}</p>
                     </Card>)}
                 </Carrossel>
-                <h2>Se identifica com algum desses casos?</h2>
+                <h2>Se identifica com algum desses casos? Então, deixa eu te explicar melhor...</h2>
             </Conteudo>
         </Servicos>
     )
 }
-const Bolinha=styled.div`
-width:10px;height:10px;border-radius:50%;margin:3px;
-background:${p=>p.selec?'white':'#6b381b'};
-`
-const Bolinhas=styled.div`
-align-items:center;justify-content:center;
-`
+
 const Card=styled.div`
 background:rgb(255,255,255,0.5);
 flex-direction:column;
@@ -55,10 +49,7 @@ height:100%;
 p{margin:5px;font-size:14px;text-align:center;}
 h3{margin:5px;font-size:17px;font-weight:500;text-align:center;}
 `
-const Seta=styled.div`
-align-items:center;position:absolute;
-width:150px;justify-content:center;height:100%;
-`
+
 const Carrossel=styled.div`
 align-items:center;position:relative;
 justify-content:space-evenly;

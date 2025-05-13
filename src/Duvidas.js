@@ -77,6 +77,9 @@ background:#c9b59b;padding:0 10px 0 10px;
 align-items:center;
 width:90%;max-width:700px;
 margin-bottom:12px;
+&:hover{
+width:calc(90% + 10px);
+}
 `
 const Conteudo=styled.div`
 flex-direction:column;
@@ -91,14 +94,14 @@ padding:0;
 font-family: "Poppins", sans-serif;
 color:var(--texto);
 h2{
-font-weight:600;
+font-weight:500;
 font-size:18px;
 width:100%;
 }
 h3{
 
-font-size:16px;margin:10px 0 10px 0;
-font-weight:500;
+font-size:16px;margin:0px 0 10px 0;
+font-weight:400;
 width:100%;
 }
 

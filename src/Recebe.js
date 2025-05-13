@@ -11,7 +11,7 @@ export default function Recebe(){
     const cards=[
 'Laudo técnico detalhado',
 
-'Sessão de 1h30 de devolutiva compreensível para sanar todas as suas dúvidas',
+'Sessão de 1h30 de devolutiva para sanar todas as suas dúvidas',
 
 'Explicação profissional sobre o seu funcionamento cognitivo (dificuldades e potencialidades)',
 
@@ -25,7 +25,7 @@ export default function Recebe(){
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='O que você recebe' noGrude={true} fonte={22} style={{justifyContent:'center'}} />
+                <Titulo nome='Ao final, você recebe:' noGrude={true} fonte={22} style={{justifyContent:'center'}} />
                 <Carrossel>
                     {cards.map(card=><Card>
                         <IoMdCheckmarkCircleOutline/>
