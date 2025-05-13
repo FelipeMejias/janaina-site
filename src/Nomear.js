@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { TiSpiral } from "react-icons/ti";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Titulo from "./Titulo";
 import { CgEnter } from "react-icons/cg";
 export default function Nomear(){
@@ -24,13 +24,42 @@ Na devolutiva, não entrego apenas um laudo, mas uma visão clara das dificuldad
 Esse é o propósito do Nomear para Transformar.
 `,icone:"✨"},
     ]
+    const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const delta = touchStartX.current - touchEndX.current;
+    const limite = 50; // mínimo de px pra considerar um swipe
+
+    if (delta > limite) {
+      // Swipe para ESQUERDA (próxima imagem)
+      if(atual!=0)setAtual(atual-1)
+    } else if (delta < -limite) {
+      // Swipe para DIREITA (imagem anterior)
+      if(atual!=4)setAtual(atual+1)
+    }
+  };
     return(
         <Servicos>
             <Conteudo>
                 <Titulo nome='Nomear para Transformar' fonte={21} style={{background:'var(--fundo2',justifyContent:'center'}} />
-                <Carrossel>
+                <Carrossel
+                
+                >
                     {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-70px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
-                    <Card>
+                    <Card
+                    onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+                    >
                         <p style={{fontSize:'50px'}}>{cards[atual].icone}</p>
                         <h1>{cards[atual].titulo}</h1>
                         <p>{cards[atual].texto}</p>
