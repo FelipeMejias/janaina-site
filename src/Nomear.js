@@ -37,14 +37,15 @@ Esse é o propósito do Nomear para Transformar.
 
   const handleTouchEnd = () => {
     const delta = touchStartX.current - touchEndX.current;
-    const limite = 50; // mínimo de px pra considerar um swipe
+    const limite = 30; // mínimo de px pra considerar um swipe
 
     if (delta > limite) {
       // Swipe para ESQUERDA (próxima imagem)
-      if(atual!=0)setAtual(atual-1)
+       if(atual!=4)setAtual(atual+1)
     } else if (delta < -limite) {
       // Swipe para DIREITA (imagem anterior)
-      if(atual!=4)setAtual(atual+1)
+     
+        if(atual!=0)setAtual(atual-1)
     }
   };
     return(
@@ -52,13 +53,13 @@ Esse é o propósito do Nomear para Transformar.
             <Conteudo>
                 <Titulo nome='Nomear para Transformar' fonte={21} style={{background:'var(--fundo2',justifyContent:'center'}} />
                 <Carrossel
-                
+                  onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
                 >
                     {atual!=0?<Seta onClick={()=>setAtual(atual-1)} style={{left:'-70px',fontSize:'36px',cursor:'pointer'}}><SlArrowLeft /></Seta>:<Seta/>}
                     <Card
-                    onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
+                  
                     >
                         <p style={{fontSize:'50px'}}>{cards[atual].icone}</p>
                         <h1>{cards[atual].titulo}</h1>
