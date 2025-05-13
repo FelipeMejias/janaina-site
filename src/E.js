@@ -86,6 +86,7 @@ padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
 color:var(--texto);
 h2{
+font-family: "Bricolage Grotesque", sans-serif;
 font-weight:500;
 font-size:18px;
 width:100%;

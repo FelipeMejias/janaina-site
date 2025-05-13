@@ -14,7 +14,7 @@ import { AindaDuvidas } from "./AindaDuvidas";
 import { Formacao } from "./Formacao";
 import { Consultorios } from "./Consultorios";
 import { E } from "./E";
-
+import perfil1 from "./imgs/perfil1.jpg"
 //import dayjs from 'dayjs'
 export default function App(){
     const [isOpen, setIsOpen] = useState(false)
@@ -87,6 +87,9 @@ export default function App(){
                 </Xis>
             </Menu>
             <Resto>
+                <Quadro>
+                  <img src={perfil1} />
+                </Quadro>
                 <Intro/>
                 <Nomear/>
                 <Quem/>
@@ -101,6 +104,11 @@ export default function App(){
         </Fundo>
     )
 }
+const Quadro = styled.div`
+background:red;
+width:100%;
+ img{width:100%;margin:0;}
+`;
 const Marker = styled.div`
   height: 5px;width:100%;background:;
   margin-bottom:10px;

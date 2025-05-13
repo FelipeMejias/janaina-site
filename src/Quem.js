@@ -47,7 +47,9 @@ max-width:180px;
 font-size:30px;
 height:100%;
 p{margin:5px;font-size:14px;text-align:center;}
-h3{margin:5px;font-size:17px;font-weight:500;text-align:center;}
+h3{margin:5px;font-size:17px;font-weight:500;text-align:center;
+font-family: "Bricolage Grotesque", sans-serif;
+}
 `
 
 const Carrossel=styled.div`

@@ -17,6 +17,7 @@ top:0px;
 
 `
 const P=styled.p`
+font-family: "Bricolage Grotesque", sans-serif;
 font-size:${p=>p.fonte}px;font-weight:600;
 margin:0
 `

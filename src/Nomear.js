@@ -91,7 +91,9 @@ max-width:500px;
 font-size:30px;
 border-radius:15px;
 p{margin:5px;font-size:16px;text-align:center;}
-h1{margin:5px;font-size:19px;font-weight:600;text-align:center;}
+h1{margin:5px;font-size:19px;font-weight:600;text-align:center;
+font-family: "Bricolage Grotesque", sans-serif;
+}
 `
 const Seta=styled.div`
 align-items:center;position:absolute;
