@@ -73,7 +73,9 @@ const Duv=styled.div`
 cursor:pointer;
 flex-direction:column;
 border-radius:10px;
-background:#c9b59b;padding:0 10px 0 10px;
+background:var(--claro);
+color:white;
+padding:0 10px 0 10px;
 align-items:center;
 width:90%;max-width:700px;
 margin-bottom:12px;

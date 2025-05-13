@@ -5,7 +5,7 @@ export function Formacao(){
     return(
         <Servicos>
             <Conteudo>
-            <Titulo nome='Minha Formação'  style={{background:'var(--fundo2',justifyContent:'center'}} />
+            <Titulo nome='Minha Formação'  style={{background:'var(--fundo2)',justifyContent:'center'}} />
 <h3>Sou psicóloga (CRP 05/75316) formada pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio).</h3>
 <h3>Tenho experiência com as Terapias Cognitivo-Comportamentais, especialmente a TCC Clássica e a Terapia Comportamental Dialética (DBT), além do atendimento de pessoas que fazem uso prejudicial de substâncias psicoativas.</h3>
 <h3>Durante a graduação, fui bolsista de Iniciação Científica e participei de grupos de estudo e pesquisa nas áreas de psicopatologia, neuropsicologia e saúde mental. Atuei também como bolsista de Treinamento e Capacitação Técnica pela FAPERJ, no Programa de Estudos e Assistência ao Uso Indevido de Drogas (PROJAD), no IPUB/UFRJ.</h3>
