@@ -7,7 +7,7 @@ export function E(){
         const [abertas,setAbertas]=useState([false,false,false,false,false,false,false,])
     const cards=[
 {icone:'🌿',titulo:'O que investigamos?',
-texto:'A avaliação neuropsicológica é uma investigação clínica que busca compreender como condições neurológicas ou psicológicas afetam o funcionamento cognitivo, comportamental e adaptativo da pessoa. Avaliamos habilidades como atenção, memória, linguagem, funções executivas e mais — com base no entendimento de que todo comportamento tem origem em sistemas neurais específicos.'
+texto:'A avaliação neuropsicológica é uma investigação clínica que busca compreender como condições neurológicas e/ou psicológicas afetam o funcionamento cognitivo, comportamental e adaptativo da pessoa. Avaliamos habilidades como atenção, memória, linguagem, funções executivas e mais — com base no entendimento de que todo comportamento tem origem em sistemas neurais específicos.'
 },
 {icone:'🧠',titulo: 'Como funciona?',
 texto:'O processo é estruturado em etapas presenciais, com duração média de 6 a 10 encontros de 1h30 cada. Ele combina entrevista clínica, aplicação de testes padronizados, escalas e observação comportamental. Cada instrumento é escolhido com base em hipóteses clínicas e nas particularidades de cada caso.'
@@ -25,8 +25,10 @@ texto:'Os dados obtidos são analisados à luz da história clínica, da evoluç
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='A avaliação neuropsicológica é:'  style={{background:'var(--fundo'}} />
-                {cards.map((duv,i)=><Duv onClick={()=>{
+                <Titulo nome='A avaliação neuropsicológica é:' fonte={22}  style={{background:'var(--fundo',justifyContent:'center'}} />
+                {cards.map((duv,i)=>
+                <Holder>
+                <Duv onClick={()=>{
                         const nova=[]
                         for(let k=0;k<abertas.length;k++){
                             const valor=abertas[k]
@@ -35,54 +37,61 @@ texto:'Os dados obtidos são analisados à luz da história clínica, da evoluç
                         console.log(nova)
                         setAbertas(nova)
                     }}>
-                    <Holder>
                     <h2>{duv.icone}{duv.titulo}</h2>
                     <Seta >
                     {abertas[i]?<GrSubtract/>:<GrAdd/>}
                     </Seta>
-                    </Holder>
-                    {abertas[i]?<h3>{duv.texto}</h3>:<></>}
-                </Duv>)}
+                </Duv>
+                <p>{abertas[i]?<h3>{duv.texto}</h3>:<></>}</p>
+                </Holder>
+                )}
             </Conteudo>
         </Servicos>
     )
 }
 const Holder=styled.div`
-width:100%;
+width:90%;align-items:center;
+max-width:700px;
+flex-direction:column;
+p{
+margin:0 0 10px 0;width:80%;
+text-align:justify;
+}
+
 `
 const Seta=styled.div`
 width:40px;height:40px;
 flex-direction:column;
-justify-content:flex-end;
+justify-content:center;
 align-items:center;background:;
 font-size:22px;
 `
 const Duv=styled.div`
 cursor:pointer;
-flex-direction:column;
 border-radius:10px;
 background:var(--claro);
 color:white;
 padding:0 10px 0 10px;
 align-items:center;
-width:90%;max-width:700px;
+width:100%;
 margin-bottom:12px;
+@media(min-width:850px){
 &:hover{
-width:calc(90% + 10px);
+width:calc(100% + 10px);
 }
+}
+
 `
 const Conteudo=styled.div`
 flex-direction:column;
 align-items:center;
 width:100%;max-width:700px;
 `
-
 const Servicos=styled.div`
 background:var(--fundo);
 flex-direction:column;
-
 width:100%;align-items:center;
-padding:0 30px 0 30px;
+padding:0;
 font-family: "Poppins", sans-serif;
 color:var(--texto);
 h2{
@@ -97,11 +106,7 @@ font-size:16px;margin:0px 0 10px 0;
 font-weight:400;
 width:100%;
 }
-strong{
-font-weight:600;
-}
 
-iframe{border:0;border-radius:10px;margin:0 0 40px 0}
-@media(min-width:850px){
-
+img{width:300px;margin:40px 0 20px 0}
+ @media(max-width:850px){h1{top:0}}
 `

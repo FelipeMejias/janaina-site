@@ -15,7 +15,7 @@ Nem sempre temos todas as respostas — e tudo bem. O importante é dar o primei
 No primeiro encontro, escuto sua história, compreendo o motivo da sua busca e juntos começamos a organizar o que precisa ser investigado.
 `,icone:"💬"},
 {titulo:'Investigar com profundidade',texto:`
-A partir da escuta, iniciamos a testagem, sempre escolhida de forma individualizada, para compreender a fundo como você pensa, reage e se organiza no dia a dia.
+A partir da escuta, iniciamos a testagem, sempre escolhida de forma individualizada, para compreender a fundo como você pensa, se comporta e se organiza no dia a dia.
 `,icone:"🔍"},
 {titulo:'Integrar e direcionar',texto:`
 Na devolutiva, não entrego apenas um laudo, mas uma visão clara das dificuldades e potencialidades identificadas, com sugestões de caminhos mais assertivos para promover qualidade de vida.

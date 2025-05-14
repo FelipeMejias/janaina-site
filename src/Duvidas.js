@@ -38,50 +38,61 @@ Fica a cargo do paciente verificar diretamente com o convênio se há reembolso 
         <Servicos>
             <Conteudo>
                 <Titulo nome='Dúvidas Frequentes' fonte={22} style={{justifyContent:'center',background:'var(--fundo)'}} />
-                {duvidas.map((duv,i)=><Duv onClick={()=>{
-                        const nova=[]
-                        for(let k=0;k<abertas.length;k++){
-                            const valor=abertas[k]
-                            nova.push(k==i?!valor:valor)
-                        }
-                        console.log(nova)
-                        setAbertas(nova)
-                    }}>
+                {duvidas.map((duv,i)=>
                     <Holder>
-                    <h2>{duv.perg}</h2>
-                    <Seta >
-                    {abertas[i]?<GrSubtract/>:<GrAdd/>}
-                    </Seta>
+                    <Duv onClick={()=>{
+                            const nova=[]
+                            for(let k=0;k<abertas.length;k++){
+                                const valor=abertas[k]
+                                nova.push(k==i?!valor:valor)
+                            }
+                            console.log(nova)
+                            setAbertas(nova)
+                        }}>
+                        <h2>{duv.perg}</h2>
+                        <Seta >
+                        {abertas[i]?<GrSubtract/>:<GrAdd/>}
+                        </Seta>
+                    </Duv>
+                    <p>{abertas[i]?<h3>{duv.resp}</h3>:<></>}</p>
                     </Holder>
-                    {abertas[i]?<h3>{duv.resp}</h3>:<></>}
-                </Duv>)}
+                    )}
             </Conteudo>
         </Servicos>
     )
 }
 const Holder=styled.div`
-width:100%;
+width:90%;align-items:center;
+max-width:700px;
+flex-direction:column;
+p{
+margin:0 0 10px 0;width:80%;
+text-align:justify;
+}
+
 `
 const Seta=styled.div`
 width:40px;height:40px;
 flex-direction:column;
-justify-content:flex-end;
+justify-content:center;
 align-items:center;background:;
 font-size:22px;
 `
 const Duv=styled.div`
 cursor:pointer;
-flex-direction:column;
 border-radius:10px;
 background:var(--claro);
 color:white;
 padding:0 10px 0 10px;
 align-items:center;
-width:90%;max-width:700px;
+width:100%;
 margin-bottom:12px;
+@media(min-width:850px){
 &:hover{
-width:calc(90% + 10px);
+width:calc(100% + 10px);
 }
+}
+
 `
 const Conteudo=styled.div`
 flex-direction:column;

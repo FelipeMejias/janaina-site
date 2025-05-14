@@ -89,6 +89,7 @@ export default function App(){
             <Resto>
                 <Quadro>
                   <img src={perfil1} />
+                  <aside/>
                 </Quadro>
                 <Intro/>
                 <Nomear/>
@@ -105,10 +106,22 @@ export default function App(){
     )
 }
 const Quadro = styled.div`
-background:red;
+position:relative;
+align-items:center;
+flex-direction:column;
+background:var(--fundo);
 width:100%;
- img{width:100%;margin:0;}
-`;
+img{width:100%;margin:0;max-width:400px;border-radius:0;}
+aside{
+position:absolute;bottom:0;
+width:100%;height:60px;
+background: linear-gradient(to top, var(--fundo),var(--fundo), transparent);
+}
+margin-bottom:-30px;
+@media(min-width:850px){
+margin-top:80px;
+}
+`
 const Marker = styled.div`
   height: 5px;width:100%;background:;
   margin-bottom:10px;
@@ -149,7 +162,6 @@ position:relative;
 flex-direction:column;
 height:100dvh;width:100dvw;
 max-width:850px;
-img{border-radius:10px;}
 span{
 position: relative;
   background-image: linear-gradient(transparent 85%, var(--sublinhado) 85%);

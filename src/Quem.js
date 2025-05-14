@@ -12,7 +12,7 @@ export default function Quem(){
 Se você sente dificuldades de memória, atenção, organização ou tomada de decisões
 `,icone:"🌱"},
 {titulo:'Sofrimento sem nome',texto:`
-Caso esteja em sofrimento emocional e não identifique exatamente por quê
+Caso esteja em sofrimento emocional e não identifique exatamente o por quê
     `,icone:"💬"},
 {titulo:'Mudanças internas',texto:`
 Caso esteja percebendo mudanças recentes em sua forma de pensar, agir ou lidar com as pessoas
@@ -37,7 +37,8 @@ Caso esteja percebendo mudanças recentes em sua forma de pensar, agir ou lidar 
 }
 
 const Card=styled.div`
-background:rgb(255,255,255,0.5);
+background:rgb(255,255,255,0.6);
+padding:5px;
 flex-direction:column;
 align-items:center;
 border-radius:15px;
@@ -70,7 +71,7 @@ padding:0;
 font-family: "Poppins", sans-serif;
 color:var(--fundo);
 
-h2{background:transparent;font-size:26px;font-weight:400;color:var(--fundo);
+h2{background:transparent;font-size:26px;font-weight:600;color:var(--fundo);
 text-align:center;width:250px;
 margin:0 0 40px 0;font-family: "Dancing Script", cursive;background:transparent;
 }

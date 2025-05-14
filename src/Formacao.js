@@ -33,5 +33,8 @@ color:var(--fundo);
 h2{font-size:24px;font-weight:600;margin:0}
 h3{font-size:18px;line-height:24px;font-weight:400;margin:20px 0 0 0;}
 text-align: justify;}
-img{width:300px;margin:30px 0 30px 0}
+img{
+width:300px;margin:30px 0 30px 0;
+border-radius:10px;
+}
 `
