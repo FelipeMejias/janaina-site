@@ -3,7 +3,7 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 export default function BotaoInsta({handle}){
 const grande=true
     return(
-        <Bot g={grande} onClick={handle}>
+        <Bot g={grande} onClick={()=>window.location.href="https://www.instagram.com/janainafaro.neuropsi"}>
            <p>Me acompanhe</p>
             <FaInstagram style={{ color: 'white', fontSize: '48px' }} />
             

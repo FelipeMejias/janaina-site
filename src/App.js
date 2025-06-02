@@ -18,6 +18,8 @@ import perfil1 from "./imgs/perfil1.jpg"
 import gotasesq from "./imgs/gotasesq.png"
 import gotasdir from "./imgs/gotasdir.png"
 import BotaoInsta from "./BotaoInsta";
+import esquema from "./imgs/esquema.png";
+import Titulo from "./Titulo";
 //import dayjs from 'dayjs'
 export default function App(){
   const [isOpen, setIsOpen] = useState(false)
@@ -82,7 +84,7 @@ export default function App(){
       </Tela>
       :<Tela>
           <BotaoWpp grande={showButton} handle={mandarWpp}/>
-          <BotaoInsta grande={showButton} handle={mandarWpp}/>
+          <BotaoInsta grande={showButton}/>
           <Menu style={{background:'var(--fundo)'}}>
               <img src={logo}/>
               <Xis onClick={() => setIsOpen(!isOpen)}>
@@ -105,6 +107,10 @@ export default function App(){
               <Nomear/>
               <Quem/>
               <E/>
+              <Esquema>
+                <Titulo nome='A avaliação pode ser fundamental quando há suspeita de...' fonte={22} style={{justifyContent:'center',background:'var(--fundo2)'}} />
+                <img src={esquema}/>
+              </Esquema>
               <Recebe />
               <Consultorios/>
               <Formacao/>
@@ -115,6 +121,14 @@ export default function App(){
       </Fundo>
   )
 }
+const Esquema=styled.div`
+background:var(--fundo2);
+width:100%;
+flex-direction:column;
+align-items:center;
+color:var(--fundo);
+img{height:400px;width:auto;margin:-20px 0 0 0}
+`
 const Chamada=styled.div`
 padding:0 10px 0 10px;
 background:var(--fundo);width:100%;

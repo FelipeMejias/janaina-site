@@ -10,6 +10,7 @@ export function Formacao(){
 <h3>Tenho experiência com as Terapias Cognitivo-Comportamentais, especialmente a TCC Clássica e a Terapia Comportamental Dialética (DBT), além do atendimento de pessoas que fazem uso prejudicial de substâncias psicoativas.</h3>
 <h3>Durante a graduação, fui bolsista de Iniciação Científica e participei de grupos de estudo e pesquisa nas áreas de psicopatologia, neuropsicologia e saúde mental. Atuei também como bolsista de Treinamento e Capacitação Técnica pela FAPERJ, no Programa de Estudos e Assistência ao Uso Indevido de Drogas (PROJAD), no IPUB/UFRJ.</h3>
 <h3>Atualmente, curso a Especialização em Neuropsicologia pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein e a Pós-graduação em Neuropsicologia dos Transtornos Mentais pela PUCPR.</h3>
+<h3>Meu olhar para a avaliação vai além da entrega de um laudo. Acredito na avaliação como uma ferramenta de transformação, um processo que oferece clareza, compreensão e, principalmente, direção. Meu compromisso é que, ao final, você não só entenda o que está acontecendo, mas saiba exatamente o que fazer com isso.</h3>
             <img style={{borderRadius:'50%'}} src={perfil} />
             </Conteudo>
         </Servicos>
