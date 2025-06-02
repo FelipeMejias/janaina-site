@@ -20,10 +20,9 @@ position:fixed;
 bottom:${p=>p.g?20:40}px;right:${p=>p.g?'20px':'calc(50% - 140px)'};
 height:70px;
 width:${p=>p.g?70:280}px;
-background:#24cc63;border-radius:35px;
+background:#984830;border-radius:35px;
 color:white;z-index:15;
 p{display:none;width:210px;font-weight:500;font-size:18px;justify-content:center;}
-&:hover{background:#2cba60;}
 ${p=>p.g?'&:hover{width:280px;p{display:flex;}}':''}
 @media(min-width:850px){
 right:${p=>p.g?'calc(50vw - 410px)':'calc(50vw - 140px)'};
