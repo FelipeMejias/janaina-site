@@ -14,7 +14,7 @@ export default function Nomear(){
     const [atual,setAtual]=useState(0)
     const cards=[
 {titulo:'O início de um olhar mais atento',texto:`
-Nem sempre temos todas as respostas — e tudo bem. O importante é dar o primeiro passo e começar a olhar com mais atenção para o que está pedindo cuidado.
+Nem sempre temos todas as respostas e tudo bem. O importante é dar o primeiro passo e começar a olhar com mais atenção para o que está pedindo cuidado.
 `,icone:i1},
 {titulo:'Dar nome ao que te trouxe até aqui',texto:`
 No primeiro encontro, escuto sua história, compreendo o motivo da sua busca e juntos começamos a organizar o que precisa ser investigado.
@@ -26,7 +26,7 @@ A partir da escuta, iniciamos a testagem, sempre escolhida de forma individualiz
 Na devolutiva, não entrego apenas um laudo, mas uma visão clara das dificuldades e potencialidades identificadas, com sugestões de caminhos mais assertivos para promover qualidade de vida.
 `,icone:i4},
 {titulo:'Você merece entender o que sente. E saber o que fazer com isso',texto:`
-Esse é o propósito do Nomear para Transformar.
+Esse é o propósito:
 `,icone:i5},
     ]
     const touchStartX = useRef(null);
@@ -69,6 +69,7 @@ Esse é o propósito do Nomear para Transformar.
                         <img src={cards[atual].icone}/>
                         <h1>{cards[atual].titulo}</h1>
                         <p>{cards[atual].texto}</p>
+                        {atual==4?<h6>Nomear para Transformar</h6>:<></>}
                     </Card>
                     {atual!=4?<Seta onClick={()=>setAtual(atual+1)} style={{right:'-70px',fontSize:'36px',cursor:'pointer'}}><SlArrowRight /></Seta>:<Seta/>}
                 </Carrossel>
@@ -105,7 +106,10 @@ p{margin:5px;font-size:16px;text-align:center;}
 h1{margin:5px;font-size:19px;font-weight:600;text-align:center;
 font-family: "Bricolage Grotesque", sans-serif;
 }
-
+h6{
+font-family: "Qwitcher Grypen", cursive;
+margin:20px 0 0 0;font-size:36px;
+}
 box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
 @media(max-width:850px){
 width:calc(100% - 0px);
