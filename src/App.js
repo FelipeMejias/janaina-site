@@ -15,112 +15,139 @@ import { Formacao } from "./Formacao";
 import { Consultorios } from "./Consultorios";
 import { E } from "./E";
 import perfil1 from "./imgs/perfil1.jpg"
+import gotasesq from "./imgs/gotasesq.png"
+import gotasdir from "./imgs/gotasdir.png"
+import BotaoInsta from "./BotaoInsta";
 //import dayjs from 'dayjs'
 export default function App(){
-    const [isOpen, setIsOpen] = useState(false)
-    const [vinho,setVinho]=useState(true)
-    function mandarWpp(){
-            const telefone = 5521999242603;
-            let texto=""
-            const encodedText = encodeURIComponent(texto);
-            const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
-            window.open(urlWhatsapp);
-        }
-    
-    useEffect(()=>{
-        setTimeout(() => {
-            setVinho(false)
-        }, 1200);
-    },[])
-
-    const markerRef = useRef(null);
-    const [showButton, setShowButton] = useState(false);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          // Quando o marcador SAI da tela, mostramos o botão
-          setShowButton(!entry.isIntersecting);
-        },
-        { threshold: 0 }
-      );
-  
-      if (markerRef.current) {
-        observer.observe(markerRef.current);
+  const [isOpen, setIsOpen] = useState(false)
+  const [vinho,setVinho]=useState(true)
+  function mandarWpp(){
+          const telefone = 5521999242603;
+          let texto=""
+          const encodedText = encodeURIComponent(texto);
+          const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
+          window.open(urlWhatsapp);
       }
   
-      return () => {
-        if (markerRef.current) {
-          observer.unobserve(markerRef.current);
-        }
-      };
-    }, []);
+  useEffect(()=>{
+      setTimeout(() => {
+          setVinho(false)
+      }, 1200);
+  },[])
 
-    return(vinho?<Vinheta/>:
-        <Fundo>
-        {isOpen?
-        <Tela style={{marginRight:'12px',background:'transparent'}}>
-            <Menu>
-                <img src={logoBranco}/>
-                <Xis onClick={() => setIsOpen(!isOpen)}>
-                    <Line isOpen={isOpen} />
-                    <Line isOpen={isOpen} />
-                </Xis>
-            </Menu>
-            <Acessos>
-                <section>
-                <h1>Serviços</h1>
-                <h1>Quem sou?</h1>
-                <h1>Contato</h1>
-                <h1>Rescursos</h1>
-                </section>
-                <Botao  handle={mandarWpp} texto={'Agende agora'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
-            </Acessos>
-        </Tela>
-        :<Tela>
-            <BotaoWpp grande={showButton} handle={mandarWpp}/>
-            <Menu style={{background:'var(--fundo)'}}>
-                <img src={logo}/>
-                <Xis onClick={() => setIsOpen(!isOpen)}>
-                    <Line isOpen={isOpen} />
-                    <Line isOpen={isOpen} />
-                </Xis>
-            </Menu>
-            <Resto>
-                <Quadro>
-                  <img src={perfil1} />
-                  <aside/>
-                </Quadro>
-                <Intro/>
-                <Nomear/>
-                <Quem/>
-                <E/>
-                <Recebe />
-                <Consultorios/>
-                <Formacao/>
-                <Duvidas/>
-                <AindaDuvidas/>
-            </Resto>
-        </Tela>}
-        </Fundo>
-    )
+  const markerRef = useRef(null);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Quando o marcador SAI da tela, mostramos o botão
+        setShowButton(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    if (markerRef.current) {
+      observer.observe(markerRef.current);
+    }
+
+    return () => {
+      if (markerRef.current) {
+        observer.unobserve(markerRef.current);
+      }
+    };
+  }, []);
+
+  return(vinho?<Vinheta/>:
+      <Fundo>
+      {isOpen?
+      <Tela style={{marginRight:'12px',background:'transparent'}}>
+          <Menu>
+              <img src={logoBranco}/>
+              <Xis onClick={() => setIsOpen(!isOpen)}>
+                  <Line isOpen={isOpen} />
+                  <Line isOpen={isOpen} />
+              </Xis>
+          </Menu>
+          <Acessos>
+              <section>
+              <h1>Serviços</h1>
+              <h1>Quem sou?</h1>
+              <h1>Contato</h1>
+              <h1>Rescursos</h1>
+              </section>
+              <Botao  handle={mandarWpp} texto={'Agende agora'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
+          </Acessos>
+      </Tela>
+      :<Tela>
+          <BotaoWpp grande={showButton} handle={mandarWpp}/>
+          <BotaoInsta grande={showButton} handle={mandarWpp}/>
+          <Menu style={{background:'var(--fundo)'}}>
+              <img src={logo}/>
+              <Xis onClick={() => setIsOpen(!isOpen)}>
+                  <Line isOpen={isOpen} />
+                  <Line isOpen={isOpen} />
+              </Xis>
+          </Menu>
+          <Resto>
+              <Chamada>
+                <img src={gotasesq} />
+                <p>Você sente que tem algo acontecendo, mas não consegue entender exatamente o quê?</p>
+                <img src={gotasdir} />
+              </Chamada>
+              <Quadro>
+                <img src={perfil1} />
+                <p>Prazer, Janaina Faro</p>
+                <aside/>
+              </Quadro>
+              <Intro/>
+              <Nomear/>
+              <Quem/>
+              <E/>
+              <Recebe />
+              <Consultorios/>
+              <Formacao/>
+              <Duvidas/>
+              <AindaDuvidas/>
+          </Resto>
+      </Tela>}
+      </Fundo>
+  )
 }
+const Chamada=styled.div`
+padding:0 10px 0 10px;
+background:var(--fundo);width:100%;
+align-items:center;justify-content:center;
+p{width:80%;font-size:24px;font-weight:700;
+color:#9a4731;max-width:400px;
+text-align:center;
+margin:20px 0 20px 0;font-family: "Dancing Script", cursive;}
+img{height:80px;width:auto;}
+@media(min-width:850px){
+margin-top:80px;
+}
+`
 const Quadro = styled.div`
 position:relative;
 align-items:center;
 flex-direction:column;
 background:var(--fundo);
 width:100%;
-img{width:100%;margin:0;max-width:400px;border-radius:0;}
+img{width:100%;margin:0;max-width:400px;border-radius:20px;}
 aside{
 position:absolute;bottom:0;
-width:100%;height:60px;
+width:100%;height:100px;max-width:400px;
 background: linear-gradient(to top, var(--fundo),var(--fundo), transparent);
 }
-margin-bottom:-30px;
-@media(min-width:850px){
-margin-top:80px;
+p{
+position:absolute;bottom:25px;
+width:100%;text-align:center;
+font-size:28px;font-family: "Bricolage Grotesque", sans-serif;
+color:black;z-index:2;font-weight:500;
 }
+margin-bottom:-30px;
+
 `
 const Marker = styled.div`
   height: 5px;width:100%;background:;

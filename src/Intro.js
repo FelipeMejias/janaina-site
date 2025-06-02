@@ -6,8 +6,7 @@ export function Intro(){
         <Servicos>
             <Conteudo>
             {/*<h1>Seja bem-vindo(a)!</h1>*/}
-            <Titulo nome='Prazer, Janaina Faro'  style={{background:'var(--fundo'}} />
-            <h3>Sou Psicóloga Pós-Graduanda em Avaliação Neuropsicológica</h3>
+            <Titulo nome='Sou Psicóloga Pós-Graduanda em Avaliação Neuropsicológica' fonte={20}  style={{justifyContent:'center',background:'var(--fundo'}} />
             <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
             <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
             <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 
@@ -34,8 +33,7 @@ padding:0 30px 0 30px;
 color:var(--texto);
 max-width:950px;
 font-family: "Poppins", sans-serif;
-h1{width:100%;font-size:22px;font-weight:400;color:var(--detalhe);
-margin:0;font-family: "Dancing Script", cursive;}
+
 
 h3{width:100%;font-size:20px;font-weight:600;margin:0 0 10px 0;font-family: "Bricolage Grotesque", sans-serif;}
 h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;

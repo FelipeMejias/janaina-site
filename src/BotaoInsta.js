@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import { FaWhatsapp } from 'react-icons/fa';
-export default function BotaoWpp({handle}){
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+export default function BotaoInsta({handle}){
 const grande=true
     return(
         <Bot g={grande} onClick={handle}>
-           
-            <FaWhatsapp style={{ color: 'white', fontSize: '48px' }} />
-            <p>Vamos conversar?</p>
+           <p>Me acompanhe</p>
+            <FaInstagram style={{ color: 'white', fontSize: '48px' }} />
+            
             {grande?<></>:<h6>Mande uma mensagem</h6>}
         </Bot>
     )
@@ -17,16 +17,15 @@ white-space: nowrap;
 justify-content:center;align-items:center;
 cursor:pointer;
 position:fixed;
-bottom:${p=>p.g?20:40}px;right:${p=>p.g?'20px':'calc(50% - 140px)'};
+bottom:${p=>p.g?20:40}px;left:${p=>p.g?'20px':'calc(50% - 140px)'};
 height:70px;
 width:${p=>p.g?70:280}px;
-background:#24cc63;border-radius:35px;
+background:var(--claro);border-radius:35px;
 color:white;z-index:15;
 p{display:none;width:210px;font-weight:500;font-size:18px;justify-content:center;}
-&:hover{background:#2cba60;}
 ${p=>p.g?'&:hover{width:280px;p{display:flex;}}':''}
 @media(min-width:850px){
-right:${p=>p.g?'calc(50vw - 410px)':'calc(50vw - 140px)'};
+left:${p=>p.g?'calc(50vw - 410px)':'calc(50vw - 140px)'};
 }
 h6{display:flex;width:210px;font-size:18px;justify-content:center;font-weight:500;}
  transition: all 0.2s ease; 
