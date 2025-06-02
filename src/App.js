@@ -127,7 +127,9 @@ width:100%;
 flex-direction:column;
 align-items:center;
 color:var(--fundo);
-img{height:400px;width:auto;margin:-20px 0 0 0}
+img{height:auto;margin:-20px 0 0 0;
+width:80%;width:500px;
+}
 `
 const Chamada=styled.div`
 padding:0 10px 0 10px;
