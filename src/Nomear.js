@@ -93,7 +93,7 @@ color:var(--fundo2);
  background: url('/marmore.png');
  background-size: cover;
   background-position: center;
-height:280px;
+height:300px;
 padding:15px 5px 15px 5px;
 flex-direction:column;
 align-items:center;
