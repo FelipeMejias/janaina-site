@@ -1,32 +1,87 @@
-import styled from "styled-components"
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
-export default function BotaoInsta({handle}){
-const grande=true
-    return(
-        <Bot g={grande} onClick={()=>window.location.href="https://www.instagram.com/janainafaro.neuropsi"}>
-           <p>Me acompanhe</p>
-            <FaInstagram style={{ color: 'white', fontSize: '40px' }} />
-            
-            {grande?<></>:<h6>Mande uma mensagem</h6>}
-        </Bot>
-    )
+import styled, { keyframes } from "styled-components";
+import { useEffect, useState } from "react";
+import { FaInstagram } from 'react-icons/fa';
+
+export default function BotaoWpp({ handle }) {
+  const [tremendo, setTremendo] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTremendo(true);
+      setTimeout(() => setTremendo(false), 600); // duração da tremidinha
+    }, 5000); // intervalo entre tremores
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Bot onClick={()=>window.location.href="https://www.instagram.com/janainafaro.neuropsi"} className={tremendo ? "tremer" : ""}>
+        <FaInstagram style={{ color: 'white', fontSize: '40px' }} />
+        <p>Descubra mais</p>
+    </Bot>
+  );
 }
-const Bot=styled.div`
-overflow:hidden;
-white-space: nowrap;
-justify-content:center;align-items:center;
-cursor:pointer;
-position:fixed;
-bottom:${p=>p.g?90:40}px;right:${p=>p.g?'20px':'calc(50% - 140px)'};
-height:60px;
-width:${p=>p.g?60:280}px;
-background:#984830;border-radius:35px;
-color:white;z-index:15;
-p{display:none;width:210px;font-weight:500;font-size:18px;justify-content:center;}
-${p=>p.g?'&:hover{width:280px;p{display:flex;}}':''}
-@media(min-width:850px){
-right:${p=>p.g?'calc(50vw - 410px)':'calc(50vw - 140px)'};
-}
-h6{display:flex;width:210px;font-size:18px;justify-content:center;font-weight:500;}
- transition: all 0.2s ease; 
-`
+// Animação de tremidinha
+const shake = keyframes`
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(6deg); }
+  60% { transform: rotate(-6deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+`;
+
+const Bot = styled.div`
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  background: #984830;
+  border-radius: 35px;
+  color: white;
+  z-index: 15;
+  transition: all 0.2s ease;
+
+  p {
+    display: none;
+    width: 210px;
+    font-weight: 500;
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  &:hover {
+    width: 280px;
+
+    p {
+      display: flex;
+    }
+
+    &.tremer {
+      animation: none !important; /* não treme se estiver com hover */
+    }
+  }
+
+  @media (min-width: 850px) {
+    right: calc(50vw - 410px);
+  }
+
+  h6 {
+    display: flex;
+    width: 210px;
+    font-size: 18px;
+    justify-content: center;
+    font-weight: 500;
+  }
+
+  &.tremer {
+    animation: ${shake} 0.6s ease-in-out;
+  }
+`;

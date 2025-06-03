@@ -4,7 +4,7 @@ import logoBranco from './imgs/logobranco.png'
 import { useEffect, useRef, useState } from "react";
 import Botao from "./Botao"
 import BotaoWpp from "./BotaoWpp"
-import Nomear from "./NomearNovo"
+import Nomear from "./Nomear"
 import Vinheta from "./Vinheta"
 import Quem from "./Quem"
 import Duvidas from "./Duvidas"
@@ -94,9 +94,9 @@ export default function App(){
           </Menu>
           <Resto>
               <Chamada>
-                <img src={gotasesq} />
+                {/*<img src={gotasesq} />*/}
                 <p>Você sente que tem algo acontecendo, mas não consegue entender exatamente o quê?</p>
-                <img src={gotasdir} />
+                {/*<img src={gotasdir} />*/}
               </Chamada>
               <Quadro>
                 <img src={perfil1} />
@@ -140,7 +140,8 @@ align-items:center;justify-content:center;
 p{width:80%;font-size:24px;font-weight:700;
 color:#9a4731;max-width:400px;
 text-align:center;
-margin:20px 0 20px 0;font-family: "Dancing Script", cursive;}
+margin:20px 0 20px 0;
+font-family: "Dancing Script", cursive;}
 img{height:80px;width:auto;}
 @media(min-width:850px){
 margin-top:80px;
