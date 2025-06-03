@@ -30,22 +30,3 @@ right:${p=>p.g?'calc(50vw - 410px)':'calc(50vw - 140px)'};
 h6{display:flex;width:210px;font-size:18px;justify-content:center;font-weight:500;}
  transition: all 0.2s ease; 
 `
-const Botao=styled.div`
-justify-content:center;align-items:center;
-cursor:pointer;
-position:fixed;
-bottom:10px;right:calc(50% - 150px);
-height:70px;
-width:300px;
-background:#24cc63;border-radius:35px;
-color:white;z-index:15;
-p{display:none;width:210px;font-size:18px;}
-&:hover{width:230px;
-border-radius:35px;
-background:#2cba60;
-p{display:flex;justify-content:center;}
-}
-@media(min-width:850px){
-right:calc(50vw - 360px);
-}
-`
