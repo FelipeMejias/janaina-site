@@ -4,7 +4,7 @@ import logoBranco from './imgs/logobranco.png'
 import { useEffect, useRef, useState } from "react";
 import Botao from "./Botao"
 import BotaoWpp from "./BotaoWpp"
-import Nomear from "./Nomear"
+import Nomear from "./NomearNovo"
 import Vinheta from "./Vinheta"
 import Quem from "./Quem"
 import Duvidas from "./Duvidas"
