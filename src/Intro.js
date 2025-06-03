@@ -6,7 +6,7 @@ export function Intro(){
         <Servicos>
             <Conteudo>
             {/*<h1>Seja bem-vindo(a)!</h1>*/}
-            <Titulo nome='Sou Psicóloga Pós-Graduanda em Avaliação Neuropsicológica' fonte={20}  style={{justifyContent:'center',background:'var(--fundo'}} />
+            <Titulo nome='Sou Psicóloga Pós-Graduanda em Avaliação Neuropsicológica' noGrude={true} fonte={20}  style={{justifyContent:'center',background:'var(--fundo'}} />
             <h4>Acredito que <span>reconhecer e nomear</span> o que sentimos nos ajuda a compreender melhor nossos comportamentos e fazer <span>escolhas mais conscientes</span>.</h4>
             <h4>Meu trabalho vai além de testes e diagnósticos — é um processo de escuta, análise e compreensão profunda do seu funcionamento, para <span>transformar esse entendimento em direcionamento</span>.</h4>
             <h4>A partir dessa visão, nasceu o <span>Nomear para Transformar!</span></h4> 

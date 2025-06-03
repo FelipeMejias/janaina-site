@@ -13,7 +13,7 @@ export function AindaDuvidas(){
         <Consultorios style={{marginBottom:'50px'}}>
             <Conteudo>
             <Titulo nome='Ainda com dúvidas?'  style={{background:'var(--fundo)'}} />
-            <h2>Se você quer entender melhor como funciona a Avaliação Neuropsicológica ou se ela faz sentido para o seu momento, me manda uma mensagem! Será um prazer te ouvir! Aproveita para me acompanhar no Instagram também.</h2>
+            <h2>Se você quer entender melhor como funciona a Avaliação Neuropsicológica ou se ela faz sentido para o seu momento, <span>me manda uma mensagem!</span> Será um prazer te ouvir! Aproveita para me acompanhar no Instagram também.</h2>
             <h2>Estou à disposição para te ajudar a seguir com mais clareza.</h2>
             <Insta style={{marginTop:'10px'}} href="https://www.instagram.com/janainafaro.neuropsi">
                 <FaInstagram style={{ color: '#925029', fontSize: '24px' }} />

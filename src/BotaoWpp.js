@@ -5,7 +5,7 @@ const grande=true
     return(
         <Bot g={grande} onClick={handle}>
            
-            <FaWhatsapp style={{ color: 'white', fontSize: '48px' }} />
+            <FaWhatsapp style={{ color: 'white', fontSize: '40px' }} />
             <p>Vamos conversar?</p>
             {grande?<></>:<h6>Mande uma mensagem</h6>}
         </Bot>
@@ -18,8 +18,8 @@ justify-content:center;align-items:center;
 cursor:pointer;
 position:fixed;
 bottom:${p=>p.g?20:40}px;right:${p=>p.g?'20px':'calc(50% - 140px)'};
-height:70px;
-width:${p=>p.g?70:280}px;
+height:60px;
+width:${p=>p.g?60:280}px;
 background:#984830;border-radius:35px;
 color:white;z-index:15;
 p{display:none;width:210px;font-weight:500;font-size:18px;justify-content:center;}

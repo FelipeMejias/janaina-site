@@ -77,7 +77,7 @@ export default function App(){
               <h1>Serviços</h1>
               <h1>Quem sou?</h1>
               <h1>Contato</h1>
-              <h1>Rescursos</h1>
+              <h1>Recursos</h1>
               </section>
               <Botao  handle={mandarWpp} texto={'Agende agora'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
           </Acessos>
@@ -132,8 +132,10 @@ width:80%;width:500px;
 }
 `
 const Chamada=styled.div`
+height:100px;
 padding:0 10px 0 10px;
 background:var(--fundo);width:100%;
+background:;
 align-items:center;justify-content:center;
 p{width:80%;font-size:24px;font-weight:700;
 color:#9a4731;max-width:400px;
