@@ -74,12 +74,13 @@ export default function App(){
           </Menu>
           <Acessos>
               <section>
-              <h1>Serviços</h1>
-              <h1>Quem sou?</h1>
-              <h1>Contato</h1>
-              <h1>Recursos</h1>
+              <h1>Quem sou eu</h1>
+              <h1>Nomear para Transformar</h1>
+              <h1>Avaliação: o que é</h1>
+              <h1>Consultório</h1>
+              <h1>Contatos</h1>
               </section>
-              <Botao  handle={mandarWpp} texto={'Agende agora'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
+              <Botao  handle={mandarWpp} texto={'Vamos conversar?'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
           </Acessos>
       </Tela>
       :<Tela>
@@ -187,19 +188,22 @@ overflow-x:hidden;
   }
 `
 
-const Acessos=styled.div`margin-right:200px;
+const Acessos=styled.div`
+margin-right:200px;
 flex-direction:column;
 justify-content:space-evenly;
 align-items:center;
 max-width:850px;position:absolute;
-height:100dvh;width:100dvw;
+height:calc(100% - 80px);width:100dvw;
 color:white;
 position:fixed;top:80px;z-index:5;
 section{
-display:flex;flex-direction:column;align-items:center;width:100%;
+height:250px;
+display:flex;flex-direction:column;
+align-items:center;width:100%;
 
 }
-h1{cursor:pointer;font-size:36px;
+h1{cursor:pointer;font-size:30px;
 font-weight:400;margin:0}
 
 `
