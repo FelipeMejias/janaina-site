@@ -23,13 +23,14 @@ export function Intro(){
 const Conteudo=styled.div`
 flex-direction:column;
 align-items:center;
-width:100%;max-width:700px;
+width:100%;max-width:950px;
+padding:0 30px 0 30px;
 `
 const Servicos=styled.div`
 background:var(--fundo);
 flex-direction:column;
 width:100%;align-items:center;
-padding:0 30px 0 30px;
+
 color:var(--texto);
 max-width:950px;
 font-family: "Poppins", sans-serif;

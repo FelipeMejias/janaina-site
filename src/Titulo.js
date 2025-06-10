@@ -11,10 +11,7 @@ const Holder=styled.div`
 height:70px;flex-direction:column;
 align-items:center;justify-content:center;
 z-index:4;width:100%;
-${p=>p.n?'':`position:sticky;top:80px;
-    @media(max-width:850px){
-top:0px;
-}`}
+${p=>p.n?'':`position:sticky;top:0px;`}
 
 `
 const P=styled.p`

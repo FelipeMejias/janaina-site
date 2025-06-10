@@ -62,14 +62,17 @@ export default function App(){
       </Tela>
       :<Tela>
           <BotoesFlutuantes/>
-          <Menu style={{background:'var(--fundo)'}}>
-              <img src={logo}/>
-              <Xis onClick={() => setIsOpen(!isOpen)}>
-                  <Line isOpen={isOpen} />
-                  <Line isOpen={isOpen} />
-              </Xis>
-          </Menu>
+          <HolderMenu>
+              <Menu style={{background:'var(--fundo)'}}>
+                <img src={logo}/>
+                <Xis onClick={() => setIsOpen(!isOpen)}>
+                    <Line isOpen={isOpen} />
+                    <Line isOpen={isOpen} />
+                </Xis>
+            </Menu>
+          </HolderMenu>
           <Resto>
+            <Conteudo>
               <Chamada>
                 <p>Você sente que tem algo acontecendo, mas não consegue entender exatamente o quê?</p>
               </Chamada>
@@ -91,11 +94,19 @@ export default function App(){
               <Formacao/>
               <Duvidas/>
               <AindaDuvidas/>
+              </Conteudo>
           </Resto>
       </Tela>}
       </Fundo>
   )
 }
+const HolderMenu=styled.div`
+justify-content:center;
+`
+const Conteudo=styled.div`
+max-width:850px;flex-direction:column;
+`
+
 const Esquema=styled.div`
 background:var(--fundo2);
 width:100%;
@@ -118,9 +129,7 @@ text-align:center;
 margin:20px 0 20px 0;
 font-family: "Dancing Script", cursive;}
 img{height:80px;width:auto;}
-@media(min-width:850px){
-margin-top:80px;
-}
+
 `
 const Quadro = styled.div`
 position:relative;
@@ -153,10 +162,7 @@ justify-content:center;
  url('/estilo.jpeg');
  background-size: cover;
   background-position: center;
-  @media(min-width:850px){
-  overflow-y:auto;
-overflow-x:hidden;
-  }
+
 `
 
 const Acessos=styled.div`
@@ -182,7 +188,7 @@ const Tela=styled.div`
 position:relative;
 flex-direction:column;
 height:100dvh;width:100dvw;
-max-width:850px;
+
 span{
 position: relative;
   background-image: linear-gradient(transparent 85%, var(--sublinhado) 85%);
@@ -197,18 +203,20 @@ position:fixed;max-width:850px;
 height:80px;width:100%;
 img{height:50px;width:50px;margin:0 0 0 10px;}
 z-index:6;
+@media(max-width:850px){
+width:calc(100% - 20px);
+}
 `
 const Resto=styled.div`
 flex-direction:column;
 align-items:center;
 height:calc(100% - 80px);width:100%;
-
-position:relative;
-  @media(max-width:850px){
-  overflow-y:auto;
-overflow-x:hidden;
 margin-top:80px;
-  }
+position:relative;
+  overflow-y:auto;
+
+overflow-x:hidden;
+scrollbar-gutter: stable both-edges;
 `
 
 

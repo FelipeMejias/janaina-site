@@ -1,3 +1,6 @@
+html {
+    color-scheme: light;
+  }
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -8,6 +11,7 @@ body {
     --fundo2:#925029;
     --texto:#292F36;
   }
+
 div{
     display:flex;
     box-sizing:border-box;
@@ -15,7 +19,7 @@ div{
   /*----------------------------------------
   -------- SCROLLS -----------------------*/
   ::-webkit-scrollbar {
-    width: 12px; 
+    width: 10px; 
     height: 12px;
     position:absolute; z-index:25;
   }
@@ -24,10 +28,10 @@ div{
     border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #bababa; 
+    background-color: rgb(255,255,255,0.5);
     border-radius: 10px;
     cursor:pointer
   } 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #8e8e8e; 
+    background-color: rgb(255,255,255,0.7);
   }
