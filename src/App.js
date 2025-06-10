@@ -41,14 +41,17 @@ export default function App(){
   return(vinho?<Vinheta/>:
       <Fundo>
       {isOpen?
-      <Tela style={{marginRight:'12px',background:'transparent'}}>
-          <Menu>
+      <Tela style={{background:'transparent'}}>
+          
+          <HolderMenu>
+            <Menu>
               <img src={logoBranco}/>
               <Xis onClick={() => setIsOpen(!isOpen)}>
                   <Line isOpen={isOpen} />
                   <Line isOpen={isOpen} />
               </Xis>
           </Menu>
+          </HolderMenu>
           <Acessos>
               <section>
               <h1 onClick={()=>scrollToParte(1)}>Quem sou eu</h1>
@@ -105,6 +108,7 @@ justify-content:center;
 `
 const Conteudo=styled.div`
 max-width:850px;flex-direction:column;
+width:100%;align-items:center;
 `
 
 const Esquema=styled.div`
@@ -171,9 +175,9 @@ flex-direction:column;
 justify-content:space-evenly;
 align-items:center;
 max-width:850px;position:absolute;
-height:calc(100% - 80px);width:100dvw;
+height:calc(100% - 80px);width:100%;
 color:white;
-position:fixed;top:80px;z-index:5;
+top:80px;z-index:5;
 section{
 height:250px;
 display:flex;flex-direction:column;

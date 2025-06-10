@@ -36,8 +36,8 @@ max-width:950px;
 font-family: "Poppins", sans-serif;
 
 
-h3{width:100%;font-size:20px;font-weight:600;margin:0 0 10px 0;font-family: "Bricolage Grotesque", sans-serif;}
-h4{width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
+h3{max-width: 100%;width:100%;font-size:20px;font-weight:600;margin:0 0 10px 0;font-family: "Bricolage Grotesque", sans-serif;}
+h4{max-width: 100%;width:100%;font-size:18px;line-height:26px;font-weight:300;margin:10px 0 10px 0;
 span{font-weight:500;}
 }
   img{width:300px;}

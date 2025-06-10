@@ -119,7 +119,7 @@ const Seta=styled.section`
 display:flex;
 align-items:center;position:absolute;
 width:150px;justify-content:center;height:100%;
-@media(max-width:850px){
+@media(max-width:650px){
 display:none
 }
 `
