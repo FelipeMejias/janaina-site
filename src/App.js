@@ -67,7 +67,7 @@ export default function App(){
           <BotoesFlutuantes/>
           <HolderMenu>
               <Menu style={{background:'var(--fundo)'}}>
-                <img src={logo}/>
+                <img style={{cursor:'pointer'}} onClick={()=>scrollToParte(0)} src={logo}/>
                 <Xis onClick={() => setIsOpen(!isOpen)}>
                     <Line isOpen={isOpen} />
                     <Line isOpen={isOpen} />
@@ -76,7 +76,7 @@ export default function App(){
           </HolderMenu>
           <Resto>
             <Conteudo>
-              <Chamada>
+              <Chamada id="p0">
                 <p>Você sente que tem algo acontecendo, mas não consegue entender exatamente o quê?</p>
               </Chamada>
               <Quadro>
@@ -127,7 +127,7 @@ padding:0 10px 0 10px;
 background:var(--fundo);width:100%;
 background:;
 align-items:center;justify-content:center;
-p{width:80%;font-size:24px;font-weight:700;
+p{;font-size:24px;font-weight:700;
 color:#9a4731;max-width:400px;
 text-align:center;
 margin:20px 0 20px 0;
