@@ -37,30 +37,18 @@ export default function App(){
           setVinho(false)
       }, 1200);
   },[])
-
-  const markerRef = useRef(null);
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Quando o marcador SAI da tela, mostramos o botão
-        setShowButton(!entry.isIntersecting);
-      },
-      { threshold: 0 }
-    );
-
-    if (markerRef.current) {
-      observer.observe(markerRef.current);
-    }
-
-    return () => {
-      if (markerRef.current) {
-        observer.unobserve(markerRef.current);
+  function scrollToParte(numero) {
+    setIsOpen(false)
+    setTimeout(() => {
+    const el = document.getElementById("p" + numero);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.innerWidth > 850) {
+        window.scrollBy({ top: -80, behavior: "instant" });
       }
-    };
-  }, []);
-
+    }
+  }, 100); // ajuste esse tempo se precisar
+  }
   return(vinho?<Vinheta/>:
       <Fundo>
       {isOpen?
@@ -74,18 +62,18 @@ export default function App(){
           </Menu>
           <Acessos>
               <section>
-              <h1>Quem sou eu</h1>
-              <h1>Nomear para Transformar</h1>
-              <h1>Avaliação: o que é</h1>
-              <h1>Consultório</h1>
-              <h1>Contatos</h1>
+              <h1 onClick={()=>scrollToParte(1)}>Quem sou eu</h1>
+              <h1 onClick={()=>scrollToParte(2)}>Nomear para Transformar</h1>
+              <h1 onClick={()=>scrollToParte(3)}>Avaliação: o que é</h1>
+              <h1 onClick={()=>scrollToParte(4)}>Consultório</h1>
+              <h1 onClick={()=>scrollToParte(5)}>Contatos</h1>
               </section>
               <Botao  handle={mandarWpp} texto={'Vamos conversar?'} fundo={'var(--detalhe)'} fundoHover={'var(--claro)'} style={{width:'200px'}} />
           </Acessos>
       </Tela>
       :<Tela>
-          <BotaoWpp grande={showButton} handle={mandarWpp}/>
-          <BotaoInsta grande={showButton}/>
+          <BotaoWpp handle={mandarWpp}/>
+          <BotaoInsta />
           <Menu style={{background:'var(--fundo)'}}>
               <img src={logo}/>
               <Xis onClick={() => setIsOpen(!isOpen)}>
@@ -109,7 +97,7 @@ export default function App(){
               <Quem/>
               <E/>
               <Esquema>
-                <Titulo nome='A avaliação pode ser fundamental quando há suspeita de...' fonte={22} style={{justifyContent:'center',background:'var(--fundo2)'}} />
+                <Titulo nome='A avaliação pode ser fundamental em casos de...' fonte={22} style={{justifyContent:'center',background:'var(--fundo2)'}} />
                 <img src={esquema}/>
               </Esquema>
               <Recebe />

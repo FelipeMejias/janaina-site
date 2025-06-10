@@ -3,7 +3,7 @@ import Titulo from "./Titulo"
 
 export function Intro(){
     return(
-        <Servicos>
+        <Servicos id="p1">
             <Conteudo>
             {/*<h1>Seja bem-vindo(a)!</h1>*/}
             <Titulo nome='Sou Psicóloga Pós-Graduanda em Avaliação Neuropsicológica' noGrude={true} fonte={20}  style={{justifyContent:'center',background:'var(--fundo'}} />

@@ -54,7 +54,7 @@ Esse é o propósito:
     }
   };
     return(
-        <Servicos>
+        <Servicos id="p2">
             <Conteudo>
                 <Titulo nome='Nomear para Transformar' fonte={21} style={{background:'var(--fundo2',justifyContent:'center'}} />
                 <Carrossel

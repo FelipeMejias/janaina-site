@@ -4,7 +4,7 @@ import sala1 from './imgs/consultorio1.jpg'
 import sala2 from './imgs/consultorio2.jpg'
 export function Consultorios(){
     return(
-        <Servicos>
+        <Servicos id="p4">
             <Conteudo>
             <Titulo nome='Consultório'  style={{background:'var(--fundo'}} />
             <h2>Atendo presencialmente em um consultório localizado em <span>Botafogo</span>, no Rio de Janeiro.
