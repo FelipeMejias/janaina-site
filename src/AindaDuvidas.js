@@ -10,9 +10,9 @@ export function AindaDuvidas(){
             navigator.clipboard.writeText('janainafaro.neuropsi@gmail.com').then(() => {setCopiado(true);setTimeout(() => setCopiado(false), 2000)}).catch(err => console.error('Erro ao copiar o texto: ', err));
             };
     return(
-        <Consultorios id="p5" style={{marginBottom:'50px'}}>
+        <Consultorios id="p5" >
             <Conteudo>
-            <Titulo nome='Ainda com dúvidas?'  style={{background:'var(--fundo)'}} />
+            <Titulo nome='Ainda com dúvidas?' noGrude={true}  style={{background:'var(--fundo)'}} />
             <h2>Se você quer entender melhor como funciona a Avaliação Neuropsicológica ou se ela faz sentido para o seu momento, <span>me manda uma mensagem!</span> Será um prazer te ouvir! Aproveita para me acompanhar no Instagram também.</h2>
             <h2>Estou à disposição para te ajudar a seguir com mais clareza.</h2>
             <Insta style={{marginTop:'10px'}} href="https://www.instagram.com/janainafaro.neuropsi">
@@ -25,7 +25,6 @@ export function AindaDuvidas(){
                 {copiado?<aside>Email copiado!</aside>:<></>}
             </Insta>
             <h5>Entender o que se sente pode mudar a forma como você vive. <span>Vamos começar essa mudança agora?</span></h5>
-            {/*<Marker ref={markerRef} />*/}
             </Conteudo>
         </Consultorios>
     )
@@ -48,7 +47,6 @@ width:100%;max-width:700px;
 const Consultorios=styled.div`
 background:var(--fundo);
 flex-direction:column;
-
 width:100%;align-items:center;
 padding:0 30px 0 30px;
 font-family: "Poppins", sans-serif;
@@ -67,9 +65,5 @@ flex-direction:column;
 display:flex;width:100%;
 justify-content:space-between;
 max-width:600px;
-}
-iframe{border:0;border-radius:10px;margin:0 0 40px 0}
-@media(min-width:850px){
-h5{margin:0 0 140px 0}
 }
 `

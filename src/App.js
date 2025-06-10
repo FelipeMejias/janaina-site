@@ -3,7 +3,6 @@ import logo from './imgs/logo.png'
 import logoBranco from './imgs/logobranco.png'
 import { useEffect, useRef, useState } from "react";
 import Botao from "./Botao"
-import BotaoWpp from "./BotaoWpp"
 import Nomear from "./Nomear"
 import Vinheta from "./Vinheta"
 import Quem from "./Quem"
@@ -15,28 +14,15 @@ import { Formacao } from "./Formacao";
 import { Consultorios } from "./Consultorios";
 import { E } from "./E";
 import perfil1 from "./imgs/perfil1.jpg"
-import gotasesq from "./imgs/gotasesq.png"
-import gotasdir from "./imgs/gotasdir.png"
-import BotaoInsta from "./BotaoInsta";
 import esquema from "./imgs/esquema.png";
 import Titulo from "./Titulo";
+import BotoesFlutuantes from "./BotoesFlutuantes";
+import { mandarWpp } from "./funcoes";
 //import dayjs from 'dayjs'
 export default function App(){
   const [isOpen, setIsOpen] = useState(false)
   const [vinho,setVinho]=useState(true)
-  function mandarWpp(){
-          const telefone = 5521999242603;
-          let texto=""
-          const encodedText = encodeURIComponent(texto);
-          const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
-          window.open(urlWhatsapp);
-      }
   
-  useEffect(()=>{
-      setTimeout(() => {
-          setVinho(false)
-      }, 1200);
-  },[])
   function scrollToParte(numero) {
     setIsOpen(false)
     setTimeout(() => {
@@ -49,6 +35,9 @@ export default function App(){
     }
   }, 100); // ajuste esse tempo se precisar
   }
+
+  useEffect(()=>{setTimeout(() => {setVinho(false)}, 1200);},[])
+
   return(vinho?<Vinheta/>:
       <Fundo>
       {isOpen?
@@ -72,8 +61,7 @@ export default function App(){
           </Acessos>
       </Tela>
       :<Tela>
-          <BotaoWpp handle={mandarWpp}/>
-          <BotaoInsta />
+          <BotoesFlutuantes/>
           <Menu style={{background:'var(--fundo)'}}>
               <img src={logo}/>
               <Xis onClick={() => setIsOpen(!isOpen)}>
@@ -83,9 +71,7 @@ export default function App(){
           </Menu>
           <Resto>
               <Chamada>
-                {/*<img src={gotasesq} />*/}
                 <p>Você sente que tem algo acontecendo, mas não consegue entender exatamente o quê?</p>
-                {/*<img src={gotasdir} />*/}
               </Chamada>
               <Quadro>
                 <img src={perfil1} />
@@ -97,7 +83,7 @@ export default function App(){
               <Quem/>
               <E/>
               <Esquema>
-                <Titulo nome='A avaliação pode ser fundamental em casos de...' fonte={22} style={{justifyContent:'center',background:'var(--fundo2)'}} />
+                <Titulo nome='A avaliação pode ser fundamental em casos de...' fonte={22} noGrude={true} style={{justifyContent:'center',background:'var(--fundo2)'}} />
                 <img src={esquema}/>
               </Esquema>
               <Recebe />
@@ -157,10 +143,7 @@ color:black;z-index:2;font-weight:500;
 margin-bottom:-30px;
 
 `
-const Marker = styled.div`
-  height: 5px;width:100%;background:;
-  margin-bottom:10px;
-`;
+
 const Fundo=styled.div`
 width:100dvw;height:100dvh;
 justify-content:center;

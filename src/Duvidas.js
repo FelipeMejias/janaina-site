@@ -37,7 +37,7 @@ Fica a cargo do paciente verificar diretamente com o convênio se há reembolso 
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Dúvidas Frequentes' fonte={22} style={{justifyContent:'center',background:'var(--fundo)'}} />
+                <Titulo nome='Dúvidas Frequentes'style={{justifyContent:'center',background:'var(--fundo)'}} />
                 {duvidas.map((duv,i)=>
                     <Holder>
                     <Duv onClick={()=>{

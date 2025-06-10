@@ -25,7 +25,7 @@ export default function Recebe(){
     return(
         <Servicos>
             <Conteudo>
-                <Titulo nome='Ao final, você recebe:' noGrude={true} fonte={22} style={{justifyContent:'center'}} />
+                <Titulo nome='Ao final, você recebe:' noGrude={true}  style={{justifyContent:'center'}} />
                 <Carrossel>
                     {cards.map(card=><Card>
                         <IoMdCheckmarkCircleOutline/>
