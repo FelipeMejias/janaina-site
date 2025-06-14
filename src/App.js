@@ -28,10 +28,7 @@ export default function App(){
     setTimeout(() => {
     const el = document.getElementById("p" + numero);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      if (window.innerWidth > 850) {
-        window.scrollBy({ top: -80, behavior: "instant" });
-      }
+      el.scrollIntoView({ behavior: "smooth" });
     }
   }, 100); // ajuste esse tempo se precisar
   }
@@ -112,10 +109,7 @@ width:100%;align-items:center;
 `
 
 const Esquema=styled.div`
-@media(max-width:850px){
-margin-left:20px;padding-right:10px;
-}
-margin-left:10px;padding-right:5px;
+
 
 background:var(--fundo2);
 width:100%;
@@ -127,11 +121,8 @@ width:80%;width:500px;
 }
 `
 const Chamada=styled.div`
-@media(max-width:850px){
-margin-left:20px;padding:0 20px 0 10px;
-}
-margin-left:10px;
-padding:0 15px 0 10px;
+
+padding:0 10px 0 10px;
 height:100px;
 
 background:var(--fundo);
@@ -147,10 +138,7 @@ img{height:80px;width:auto;}
 
 `
 const Quadro = styled.div`
-@media(max-width:850px){
-margin-left:20px;padding-right:10px;
-}
-margin-left:10px;padding-right:5px;
+
 
 position:relative;
 align-items:center;
@@ -190,7 +178,7 @@ margin-right:200px;
 flex-direction:column;
 justify-content:space-evenly;
 align-items:center;
-max-width:850px;position:absolute;
+position:absolute;
 height:calc(100% - 80px);width:100%;
 color:white;
 top:80px;z-index:5;
@@ -229,7 +217,7 @@ width:calc(100% - 20px);
 `
 const Resto=styled.div`
 
-
+padding-left:10px;
 flex-direction:column;
 align-items:center;
 height:calc(100% - 80px);width:100%;

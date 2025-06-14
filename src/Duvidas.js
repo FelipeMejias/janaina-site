@@ -100,10 +100,7 @@ align-items:center;
 width:100%;max-width:700px;
 `
 const Servicos=styled.div`
-@media(max-width:850px){
-margin-left:20px;padding-right:10px;
-}
-margin-left:10px;padding-right:5px;
+
 
 background:var(--fundo);
 flex-direction:column;
