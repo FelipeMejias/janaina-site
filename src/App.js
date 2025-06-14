@@ -112,6 +112,11 @@ width:100%;align-items:center;
 `
 
 const Esquema=styled.div`
+@media(max-width:850px){
+margin-left:20px;padding-right:10px;
+}
+margin-left:10px;padding-right:5px;
+
 background:var(--fundo2);
 width:100%;
 flex-direction:column;
@@ -122,9 +127,15 @@ width:80%;width:500px;
 }
 `
 const Chamada=styled.div`
+@media(max-width:850px){
+margin-left:20px;padding:0 20px 0 10px;
+}
+margin-left:10px;
+padding:0 15px 0 10px;
 height:100px;
-padding:0 10px 0 10px;
-background:var(--fundo);width:100%;
+
+background:var(--fundo);
+width:100%;
 background:;
 align-items:center;justify-content:center;
 p{;font-size:24px;font-weight:700;
@@ -136,6 +147,11 @@ img{height:80px;width:auto;}
 
 `
 const Quadro = styled.div`
+@media(max-width:850px){
+margin-left:20px;padding-right:10px;
+}
+margin-left:10px;padding-right:5px;
+
 position:relative;
 align-items:center;
 flex-direction:column;
@@ -212,6 +228,8 @@ width:calc(100% - 20px);
 }
 `
 const Resto=styled.div`
+
+
 flex-direction:column;
 align-items:center;
 height:calc(100% - 80px);width:100%;
@@ -220,7 +238,6 @@ position:relative;
   overflow-y:auto;
 
 overflow-x:hidden;
-scrollbar-gutter: stable both-edges;
 `
 
 

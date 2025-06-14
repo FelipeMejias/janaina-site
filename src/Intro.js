@@ -27,6 +27,11 @@ width:100%;max-width:950px;
 padding:0 30px 0 30px;
 `
 const Servicos=styled.div`
+@media(max-width:850px){
+margin-left:20px;padding-right:10px;
+}
+margin-left:10px;padding-right:5px;
+
 background:var(--fundo);
 flex-direction:column;
 width:100%;align-items:center;

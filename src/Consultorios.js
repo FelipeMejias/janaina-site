@@ -33,11 +33,16 @@ width:100%;
 img{width:calc(50% - 10px);};
 `
 const Servicos=styled.div`
+@media(max-width:850px){
+margin-left:20px;padding:0 40px 0 30px;
+}
+margin-left:10px;
+
 background:var(--fundo);
 flex-direction:column;
 
 width:100%;align-items:center;
-padding:0 30px 0 30px;
+padding:0 35px 0 30px;
 font-family: "Poppins", sans-serif;
 color:var(--texto);
 

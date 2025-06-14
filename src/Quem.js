@@ -64,10 +64,14 @@ align-items:center;
 width:100%;max-width:700px;
 `
 const Servicos=styled.div`
+@media(max-width:850px){
+margin-left:20px;padding-right:10px;
+}
+margin-left:10px;padding-right:5px;
+
 background:transparent;
 flex-direction:column;
 width:100%;align-items:center;
-padding:0;
 font-family: "Poppins", sans-serif;
 color:var(--fundo);
 
