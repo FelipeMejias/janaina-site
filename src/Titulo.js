@@ -8,10 +8,7 @@ export default function Titulo({noGrude,nome,style,fonte}){
     )
 }
 const Holder=styled.div`
-@media(max-width:850px){
-padding-right:10px;
-}
-padding-right:5px;
+
 
 height:70px;flex-direction:column;
 align-items:center;justify-content:center;
