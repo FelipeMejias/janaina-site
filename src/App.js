@@ -226,6 +226,10 @@ position:relative;
   overflow-y:auto;
 
 overflow-x:hidden;
+
+@supports (-webkit-touch-callout: none) {
+    padding-right: 10px;
+  }
 `
 
 
