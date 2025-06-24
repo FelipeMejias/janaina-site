@@ -27,7 +27,7 @@ resp:'Sim. Muitas pessoas buscam esse processo para entender melhor suas dificul
 
 {perg:'Quais são as formas de pagamento disponíveis?',
 
-resp:'O pagamento pode ser feito via Pix, com desconto, ou por cartão de crédito, com possibilidade de parcelamento em até 4 vezes sem acréscimo. Os detalhes são combinados diretamente no momento do agendamento.'},
+resp:'O pagamento pode ser feito via Pix ou por cartão de crédito, com parcelamento em até 4x sem juros. Os detalhes são alinhados diretamente no momento do agendamento.'},
 
 {perg:'Aceita plano de saúde?',
 resp:`Atualmente, o atendimento é realizado de forma particular. No entanto, posso emitir recibo para solicitação de reembolso junto ao seu plano de saúde, conforme as regras da operadora.
