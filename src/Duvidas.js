@@ -7,26 +7,21 @@ export default function Duvidas(){
     const [abertas,setAbertas]=useState([false,false,false,false,false,false,false,])
     const duvidas=[
 {perg:'Quanto tempo dura o processo de avaliação?',
-resp:'A avaliação neuropsicológica dura aproximadamente 7 sessões, com cerca de 1h30 cada. A duração exata depende da complexidade da demanda e da quantidade de instrumentos clínicos necessários para responder as perguntas centrais do caso.'},
+resp:'A duração da Avaliação Neuropsicológica depende da complexidade do caso e da quantidade de instrumentos necessários para responder às perguntas centrais da demanda. De modo geral, o processo envolve uma sessão inicial de anamnese, cerca de quatro sessões presenciais de testagem e uma sessão final de devolutiva, na qual os resultados são discutidos e o laudo é entregue. O número de encontros pode variar conforme as particularidades do caso, sempre com foco na escuta qualificada, na profundidade da análise e na aplicabilidade prática das conclusões.'},
 
 {perg:'Qual a diferença entre psicoterapia e avaliação neuropsicológica?',
-
 resp:'A psicoterapia é um processo contínuo, com acompanhamento frequente e elaboração emocional mais aprofundada. Já a avaliação neuropsicológica tem início, meio e fim bem definidos e se caracteriza como uma investigação clínica pontual, com o objetivo de analisar profundamente como seu cérebro está funcionando e como isso impacta sua vida. Ao final, em uma sessão de devolutiva, você recebe um laudo com orientações práticas. São atuações diferentes, mas que podem se potencializar.'},
 
 {perg:'Preciso de encaminhamento médico para realizar a avaliação?',
-
 resp:'Não. Você pode buscar a avaliação por vontade própria, especialmente se estiver vivenciando dificuldades de atenção, memória, organização ou qualquer disfunção executiva que possa ser um alvo terapêutico. Encaminhamentos médicos são bem-vindos, mas não obrigatórios.'},
 
 {perg:'Psicólogo pode dar diagnóstico?',
-
 resp:'Sim! Psicólogos têm competência legal e técnica para realizar diagnósticos. No caso da avaliação, o trabalho é feito com base em testes padronizados, entrevistas e critérios clínicos, com o mesmo rigor utilizado por outros profissionais da saúde.'},
 
 {perg:'A avaliação é indicada mesmo sem suspeita de diagnóstico?',
-
 resp:'Sim. Muitas pessoas buscam esse processo para entender melhor suas dificuldades cotidianas ou aprofundar o autoconhecimento. A avaliação também é uma ferramenta de clareza e direcionamento.'},
 
 {perg:'Quais são as formas de pagamento disponíveis?',
-
 resp:'O pagamento pode ser feito via Pix ou por cartão de crédito, com parcelamento em até 4x sem juros. Os detalhes são alinhados diretamente no momento do agendamento.'},
 
 {perg:'Aceita plano de saúde?',
